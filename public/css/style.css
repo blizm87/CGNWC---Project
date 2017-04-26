@@ -24,7 +24,7 @@ body {
         }
 
     #navContainer {
-      background-color: orange;
+      background-color: orangered;
       border: 1px solid black;
       height: 100%;
     }
@@ -43,8 +43,24 @@ body {
       margin-right: 1em;
       margin-top: 1em;
       height: 98%;
-      background-color: seagreen;
+      background-color: rgba(25,255, 105, .4);
     }
+
+        .slideContainer {
+          border: 1px solid black;
+          width: 100%;
+          height: 400px;
+        }
+
+            .imgContainer {
+              width: 100%;
+              height: 100%;
+            }
+
+            .imgContent {
+              width: 100%;
+              height: 100%;
+            }
 
     #myFooter {
       height: 4em;

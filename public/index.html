@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" ng-app="cgnwcApp">
 <head>
   <title>Coconut Grove Negro Women's Club</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css"
     integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD"
     crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
 </head>
 <body>
 <!--   <h1>Testing CGNWC</h1>
@@ -27,9 +28,20 @@
       </ul>
     </div>
 
-    <div class='pure-g pure-u-19-24' id='mainBodyContainer'>
+    <div class='pure-g pure-u-19-24' id='mainBodyContainer' ng-controller='imageCycle'>
       <div id='mainContent'>
-        <img src='./assets/scholarshipPics/pic5.png' width='100%'>
+
+        <div class='slideContainer'>
+          <div class='imgContainer'><img src='./assets/scholarshipPics/pic5.png' class='pure-img imgContent'></div>
+          <div class='imgContainer'><img src='./assets/scholarshipPics/pic4.png' class='pure-img imgContent'></div>
+          <div class='imgContainer'><img src='./assets/scholarshipPics/pic1.png' class='pure-img imgContent'></div>
+          <div class='imgContainer'><img src='./assets/mentoringPics/pic1.jpg' class='pure-img imgContent'></div>
+
+<!--           <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+          <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button> -->
+
+        </div>
+
       </div>
     </div>
 
@@ -44,6 +56,12 @@
   <img src='./assets/mentoringPics/pic1.jpg' width='400px' height='300px'>
   <img src='./assets/mentoringPics/pic2.jpg' width='400px' height='300px'> -->
 
+
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous"></script>
+  <script src="./app.js"></script>
 </body>
 </html>
 
