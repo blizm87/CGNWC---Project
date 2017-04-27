@@ -28,14 +28,39 @@
       </ul>
     </div>
 
-    <div class='pure-g pure-u-19-24' id='mainBodyContainer' ng-controller='imageCycle'>
+    <div class='pure-g pure-u-19-24' id='mainBodyContainer'>
       <div id='mainContent'>
 
-        <div class='slideContainer'>
-          <div class='imgContainer'><img src='./assets/scholarshipPics/pic5.png' class='pure-img imgContent'></div>
-          <div class='imgContainer'><img src='./assets/scholarshipPics/pic4.png' class='pure-img imgContent'></div>
-          <div class='imgContainer'><img src='./assets/scholarshipPics/pic1.png' class='pure-img imgContent'></div>
-          <div class='imgContainer'><img src='./assets/mentoringPics/pic1.jpg' class='pure-img imgContent'></div>
+        <div ng-controller='imageCycle' class='slideContainer'>
+          <div class='tempSlide'>
+            <div class='imgContainer'>
+              <img src='./assets/scholarshipPics/pic5.png' class='pure-img imgContent'>
+            </div>
+          </div>
+
+          <div class='indSlideContainer slide'>
+            <div class='imgContainer'>
+              <img src='./assets/scholarshipPics/pic5.png' class='pure-img imgContent'>
+            </div>
+          </div>
+
+          <div class='indSlideContainer slide'>
+            <div class='imgContainer'>
+              <img src='./assets/scholarshipPics/pic4.png' class='pure-img imgContent'>
+            </div>
+          </div>
+
+          <div class='indSlideContainer slide'>
+            <div class='imgContainer'>
+              <img src='./assets/scholarshipPics/pic1.png' class='pure-img imgContent'>
+            </div>
+          </div>
+
+          <div class='indSlideContainer slide'>
+            <div class='imgContainer'>
+              <img src='./assets/mentoringPics/pic1.jpg' class='pure-img imgContent'>
+            </div>
+          </div>
 
 <!--           <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
           <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button> -->
