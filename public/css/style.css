@@ -8,13 +8,40 @@ body {
 */  background-color: rgb(0,178,62);
 }
 
-.slide {
-  -webkit-animation: slideout 3s; /* Safari, Chrome and Opera > 12.1 */
-  animation-name: fadeIn;
+h1 {
+  color: rgb(255,255,255);
+  text-align: center;
 }
-    @keyframes fadeIn {
-      from  {opacity: .5;}
-      to {opacity: 1;}
+
+.slideIn {
+  -webkit-animation: slideInLeft 2s; /* Safari, Chrome and Opera > 12.1 */
+  animation-name: slideInLeft;
+}
+    @keyframes slideInLeft {
+      from  {
+        width: 100%;
+        margin-left: 100%;
+      }
+      to {
+        width: 100%;
+        margin-left: 0;
+      }
+    }
+
+.slideOut {
+  -webkit-animation: slideOutLeft 2s; /* Safari, Chrome and Opera > 12.1 */
+  animation-name: slideOutLeft;
+}
+
+    @keyframes slideOutleft {
+      from  {
+        width: 100%;
+        margin-left: 0%;
+      }
+      to {
+        width: 100%;
+        margin-left: -100%;
+      }
     }
 
 #mainContainer {
@@ -40,9 +67,21 @@ body {
           margin-left: 10%;
         }
 
-        #navbar>li>a {
+        #navbar>div {
+          display: inline-block;
+        }
+
+        #navbar>div>li>a {
           color: black;
           font-size: 20px;
+        }
+
+        @media screen and (max-width: 768px) {
+
+            #navbar>div {
+              display: block;
+            }
+
         }
 
     #mainBodyContainer {
@@ -56,17 +95,27 @@ body {
           margin-left: 1em;
           margin-right: 1em;
           margin-top: 1em;
-          padding-top: 2em;
+          padding-top: .5em;
           height: 98%;
           background-color: rgba(25,255, 105, .4);
         }
 
             .slideContainer {
               width: 95%;
-              height: 300px;
+              height: 47%;
               margin: 0 auto;
               overflow: hidden;
               border:1px solid black;
+            }
+
+            @media screen and (max-width: 768px){
+                .slideContainer {
+                  width: 95%;
+                  height: 14%;
+                  margin: 0 auto;
+                  overflow: hidden;
+                  border: 1px solid black;
+                }
             }
 
                 .indSlideContainer {
@@ -84,9 +133,30 @@ body {
                       height: 100%;
                     }
 
+            .donateBtnContainer {
+              text-align: center;
+            }
+
+                .donateBtn {
+                  padding: 1em 1.5em 1em 1.5em;
+                  background-color: rgb(0,0,128);
+                  color: white;
+                  border: none;
+                }
+
+                .donateBtn>a {
+                  text-decoration: none;
+                }
+
+                .donateBtn>a:visited {
+                  color: inherit;
+                  text-decoration: none;
+                }
+
         #myFooter {
-          height: 4em;
-          background-color: red;
+          margin-top: 2em;
+          height: 3em;
+          background-color: rgb(244,115,33);
         }
 /*.navContainer {
   width: 15%;

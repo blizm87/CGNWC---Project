@@ -6,8 +6,6 @@
     .controller('imageCycle', cycleImage)
 
     function cycleImage(){
-      // let $slideDiv = $('.imgContainer');
-      // let $slides = $('.imgContent');
       let slideIndex = 0;
       let $indSlideContainer = $('.indSlideContainer');
       let $tempSlide = $('.tempSlide');
@@ -22,8 +20,11 @@
           slideIndex = 1;
         }
         $tempSlide[0].style.display = 'none';
+        // angular.element($indSlideContainer[slideIndex-1]).addClass('slideOut');
+        // angular.element($indSlideContainer[slideIndex-1]).addClass('slideIn');
         $indSlideContainer[slideIndex-1].style.display = 'block';
-      }, 5000);
+        console.log($indSlideContainer[slideIndex]);
+      }, 3000);
 
     }
 })();
