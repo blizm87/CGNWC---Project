@@ -24,13 +24,13 @@ h1 {
       }
       to {
         width: 100%;
-        margin-left: 0;
+        margin-left: 0%;
       }
     }
 
 .slideOut {
-  -webkit-animation: slideOutLeft 2s; /* Safari, Chrome and Opera > 12.1 */
-  animation-name: slideOutLeft;
+/*  -webkit-animation: slideOutLeft 2s;  Safari, Chrome and Opera > 12.1
+  animation-name: slideOutLeft;*/
 }
 
     @keyframes slideOutleft {
@@ -61,7 +61,8 @@ h1 {
 
     #navContainer {
       background-color: rgb(244,115,33);
-      border: 1px solid black;
+      border-top: 5px solid orangered;
+      border-bottom: 5px solid orangered;
     }
         #navbar {
           margin-left: 10%;
@@ -69,12 +70,41 @@ h1 {
 
         #navbar>div {
           display: inline-block;
+          background-color: rgb(244,115,33);
+          border-collapse: collapse;
         }
+
+/*        .triShape {
+          float: right;
+          border-left: 22px solid rgb(0,0,128);
+          border-right: 22px solid rgb(244,115,33);
+          border-bottom: 22px solid rgb(244,115,33);
+          border-top: 22px solid rgb(244,115,33);
+        }*/
 
         #navbar>div>li>a {
           color: black;
           font-size: 20px;
         }
+
+        #navbar>div>li>a:visited {
+          background-color: rgb(244,115,33);
+        }
+
+        #navbar>div>li>a:hover {
+          background-color: rgb(244,115,33);
+          color: silver;
+        }
+
+/*        #navbar>div>li>a:active {
+          background-color: rgb(25,255,105);
+        }*/
+
+
+/*        #navbar>div>li>a:visited::after {
+          background-color: rgb(244,115,33);
+        }*/
+
 
         @media screen and (max-width: 768px) {
 
@@ -139,7 +169,7 @@ h1 {
 
                 .donateBtn {
                   padding: 1em 1.5em 1em 1.5em;
-                  background-color: rgb(0,0,128);
+                  background-color: purple;
                   color: white;
                   border: none;
                 }
