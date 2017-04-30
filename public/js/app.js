@@ -3,9 +3,6 @@
   console.log('I am cgnwc module');
   angular
     .module('cgnwcApp', ['ngRoute'])
-    .config(['$locationProvider', function($locationProvider) {
-      $locationProvider.hashPrefix('');
-    }])
     .config(routes)
     .controller('imageCycle', cycleImage)
 
