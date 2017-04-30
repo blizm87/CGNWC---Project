@@ -2,7 +2,11 @@
   'use strict';
   console.log('I am cgnwc module');
   angular
-    .module('cgnwcApp', [])
+    .module('cgnwcApp', ['ngRoute'])
+    .config(['$locationProvider', function($locationProvider) {
+      $locationProvider.hashPrefix('');
+    }])
+    .config(routes)
     .controller('imageCycle', cycleImage)
 
     function cycleImage(){
@@ -37,4 +41,28 @@
       }, 8000);
 
     }
+
+    function routes($routeProvider){
+      $routeProvider
+        .when('/', {
+          templateUrl: '../partials/index.html',
+          controller: 'imageCycle'
+        })
+        .when('/mission', {
+          templateUrl: '../partials/mission.html'
+        })
+        .when('/programs', {
+          templateUrl: '../partials/programs.html'
+        })
+        .when('/events', {
+          templateUrl: '../partials/events.html'
+        })
+        .when('/contactUs', {
+          templateUrl: '../partials/contactUs.html'
+        })
+        .otherwise({
+          rediretTo: '/'
+        })
+    }
+
 })();
