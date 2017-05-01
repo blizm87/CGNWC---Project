@@ -23,5 +23,6 @@ app.use('/members', routes);
 const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
+  console.log(process.env.PORT)
   console.log('I am listening!!!');
 })
