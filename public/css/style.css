@@ -16,34 +16,15 @@ h1 {
 }
 
 .slideIn {
-  -webkit-animation: slideInLeft 2s; /* Safari, Chrome and Opera > 12.1 */
-  animation-name: slideInLeft;
+  -webkit-animation: slideInLeft 15s linear; /* Safari, Chrome and Opera > 12.1 */
+  animation-name: slideInLeft 15s linear;
 }
     @keyframes slideInLeft {
-      from  {
-        width: 100%;
-        margin-left: 100%;
-      }
-      to {
-        width: 100%;
-        margin-left: 0%;
-      }
-    }
-
-.slideOut {
-/*  -webkit-animation: slideOutLeft 2s;  Safari, Chrome and Opera > 12.1
-  animation-name: slideOutLeft;*/
-}
-
-    @keyframes slideOutleft {
-      from  {
-        width: 100%;
-        margin-left: 0%;
-      }
-      to {
-        width: 100%;
-        margin-left: -100%;
-      }
+        0% {margin-left: 100%}
+        15% {margin-left: 0}
+        80% {margin-left: 0}
+        80% {opacity: 1}
+        100% {opacity: 0}
     }
 
 #mainContainer {
@@ -74,22 +55,15 @@ h1 {
         }
 
         #navbar>div {
-          display: inline-block;
+          display: inline;
           background-color: rgb(244,115,33);
           border-collapse: collapse;
         }
 
-/*        .triShape {
-          float: right;
-          border-left: 22px solid rgb(0,0,128);
-          border-right: 22px solid rgb(244,115,33);
-          border-bottom: 22px solid rgb(244,115,33);
-          border-top: 22px solid rgb(244,115,33);
-        }*/
-
         #navbar>div>li>a {
           color: black;
           font-size: 20px;
+          font-weight: bold;
         }
 
         #navbar>div>li>a:visited {
@@ -131,7 +105,6 @@ h1 {
             .indexContainer {
               max-width: 100%;
               max-height: 100%;
-              border: 1px solid black;
             }
 
 
@@ -159,17 +132,18 @@ h1 {
 
                     .indSlideContainer {
                       display: none;
+                      height: 300px;
                     }
 
 
                         .imgContainer {
-                          width: 100%;
-                          height: 100%;
+                          width: 1100px;
+                          height: 300px;
                         }
 
                         .imgContent {
                           width: 1100px;
-                          max-height: 450px;
+                          max-height: 300px;
                         }
 
                 .donateBtnContainer {
@@ -180,6 +154,8 @@ h1 {
                       padding: 1em 1.5em 1em 1.5em;
                       background-color: rgb(0,0,128);
                       color: white;
+                      font-family: 'Cinzel';
+                      font-weight: bold;
                       border: 5px outset rgb(0,0,128);
                     }
 
@@ -199,18 +175,26 @@ h1 {
 
 
             .missionContainer {
-
+              width: 100%;
+              height: 100%;
             }
 
-                .missionContainer>h1 {
-                  color: rgb(0,0,128);
+                .missionStatCont {
+                  width: 90%;
+                  margin-left: auto;
+                  margin-right: auto;
+                  margin-top: 2em;
+                  background-color: black;
+                  border: 10px outset orangered;
                 }
 
-                .missionStatCont {
+                .missionStatCont>h1 {
                   width: 80%;
-                  margin: 0 auto;
-                  background-color: black;
+                  margin-left: auto;
+                  margin-right: auto;
                   color: orangered;
+                  border-bottom: 1px solid orangered;
+
                 }
 
                 .missionStatement {
@@ -218,7 +202,9 @@ h1 {
                   font-size: 24px;
                   margin-left: 4em;
                   margin-right: 4em;
+                  color: orangered;
                   font-family: 'Taviraj';
+                  padding-bottom: 2em;
                 }
 
             .programsContainer {
