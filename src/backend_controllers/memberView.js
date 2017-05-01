@@ -1,4 +1,4 @@
-var Members = require('../models/members.js');
+const Members = require('../models/members.js');
 
 // GET ALL
 function getAll(request, response){

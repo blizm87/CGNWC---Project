@@ -6,12 +6,12 @@ const methodOverride = require('method-override');
 var viewMembers = require('../backend_controllers/memberView.js');
 
 // http://127.0.0.1:3000/members
-router.route('/members')
+router.route('/')
 
   //GET all presidents
   .get(viewMembers.getAll)
 
-router.route('/members/:id')
+router.route('/:id')
 
   // GET return specific president
   .get(viewMembers.getOne)
