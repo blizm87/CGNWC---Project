@@ -1,3 +1,4 @@
+console.log('I am the seed before it runs');
 require('./config.js');
 // REQUIRE MODELS
 const member = require('../models/members.js')
