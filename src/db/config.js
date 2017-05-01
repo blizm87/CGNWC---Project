@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 console.log('I am the mongoose before it runs');
 console.log('I am the url: ' + process.env.MONGODB_URI);
+console.log(Promise)
 mongoose.Promise = Promise
 const url = process.env.MONGODB_URI || 'mongodb://localhost/cgnwc'
 console.log('I am the mongoose!!!')
