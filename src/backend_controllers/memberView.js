@@ -1,3 +1,5 @@
+// NO LONGER INFLUENCING THE APPLICATION
+
 const Members = require('../models/members.js');
 
 // GET ALL

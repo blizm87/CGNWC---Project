@@ -29,7 +29,6 @@
                       <p>Brief Description</p>
                       </div>`;
             conCat.push(htmlTemp)
-            console.log(obj)
           });
           html = conCat[0] + conCat[1] + conCat[2];
           $brdMemCont.append(html);
