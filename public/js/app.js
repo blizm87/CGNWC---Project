@@ -5,6 +5,22 @@
     .module('cgnwcApp', ['ngRoute'])
     .config(routes)
     .controller('imageCycle', cycleImage)
+    .controller('linkReq', linkReq)
+
+    linkReq.$inject = ['$http']
+    function linkReq($http){
+      var vm = this;
+      const $getMemb = $('.getMemb');
+      $getMemb.on('click', function(){
+        $http
+          .get('/members')
+          .then(function(response){
+            console.log(response);
+          }, function(err){
+            console.log(err);
+          })
+      })
+    }
 
     function cycleImage(){
       let slideIndex = 0;
@@ -55,7 +71,8 @@
           templateUrl: '../partials/events.html'
         })
         .when('/contactUs', {
-          templateUrl: '../partials/contactUs.html'
+          templateUrl: '../partials/contactUs.html',
+          controller: 'linkReq'
         })
         .otherwise({
           rediretTo: '/'
