@@ -68,7 +68,7 @@
         $tempSlide[0].style.display = 'none';
         $indSlideContainer[slideIndex].style.display = 'block';
 
-      }, 15010);
+      }, 15005);
 
     }
 
