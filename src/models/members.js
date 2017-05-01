@@ -5,6 +5,7 @@ var memberSchema = new mongoose.Schema({
   'f_name': String,
   'm_name': String,
   'l_name': String,
+  'fullName': String,
   'title': String,
   createdAt: { type: Date, default: Date.now }
 });

@@ -7,6 +7,7 @@ var cgnwcMember = new member({
   f_name: 'Justin',
   m_name: 'Kyle',
   l_name: 'Samuels',
+  fullName: 'Justin Kyle Samuels',
   title: 'Web Developer'
 })
 
