@@ -112,6 +112,7 @@ h1 {
                 .topSec {
                   width: 100%;
                   height: 100%;
+                  padding-bottom: 1em;
                 }
 
                     .slideContainer {
@@ -178,6 +179,12 @@ h1 {
                         .donateBtn:active {
                           border: 5px inset rgb(0,0,128);
                         }
+
+                .aboutUs {
+                  padding-left: 4em;
+                  padding-right: 4em;
+                  padding-bottom: 2em;
+                }
 
                 .historySec {
                   padding-left: 4em;
