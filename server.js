@@ -16,9 +16,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // ROUTES
-const routes = require('./src/config/routes.js');
+const memberRoutes = require('./src/routes/member.js');
+const adminRoutes = require('./src/routes/admin.js');
 
-app.use('/members', routes);
+app.use('/members', memberRoutes);
+app.use('/admin', adminRoutes)
 
 const port = process.env.PORT || 3000;
 

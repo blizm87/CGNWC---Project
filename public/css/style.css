@@ -96,8 +96,8 @@ h1 {
           margin-left: auto;
           margin-right: auto;
           padding-bottom: 3em;
-          background-color: magenta;
-          /*rgba(25,255, 105, .4)*/
+          background-color: rgba(25,255, 105, .4);
+          /*magenta*/
           border-left: 25px solid rgb(0,178,128);
           border-right: 25px solid rgb(0,178,128);
           border-top: 25px solid rgb(32,255,128);
@@ -182,8 +182,8 @@ h1 {
                 .historySec {
                   padding-left: 4em;
                   padding-right: 4em;
-                  background-color: violet;
-                  /*rgba(25,255, 105,1)*/
+/*                  background-color: violet;
+*/                  /*rgba(25,255, 105,1)*/
                 }
 
 
