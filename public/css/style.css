@@ -159,6 +159,7 @@ h1 {
           margin-left: auto;
           margin-right: auto;
           padding-bottom: 3em;
+          padding-top: 3em;
           background-color: rgba(25,255, 105, .4);
           /*magenta*/
           border-left: 25px solid rgb(0,178,128);
@@ -228,6 +229,39 @@ h1 {
 /*                  background-color: violet;
 */                  /*rgba(25,255, 105,1)*/
                 }
+
+            .governanceContainer {
+              width: 100%;
+            }
+
+                .govSecContainer {
+                  width: 90%;
+                  border-left: 1px solid black;
+                  border-right: 1px solid black;
+                  border-top: 1px solid black;
+                  margin: 0 auto;
+                }
+
+                    .govSecContainer>section {
+                      border-bottom: 1px solid black;
+                    }
+
+                    .bylaws {
+
+                    }
+
+                    .duties {
+
+                    }
+
+                    .heiarchy {
+
+                    }
+
+                        .heiarchy>img {
+                          margin: 0 auto;
+                          width: 700px;
+                        }
 
 
             .missionContainer {
