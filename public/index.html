@@ -23,11 +23,19 @@
       <ul class='pure-menu-list myNav' id='navbar'>
           <div>
             <li class='pure-menu-item pure-menu-has-children pure-menu-allow-hover'>
-              <a href='/#!/' class='pure-menu-link'>HOME</a>
-              <ul class='pure-menu-children'>
+              <a href='/#!/' class='pure-menu-link'>CGNWC</a>
+              <ul class='pure-menu-children' id='homeSubMenu'>
                 <li class='pure-menu-item'><a href='#' class='pure-menu-link'>ABOUT US</a></li>
                 <li class='pure-menu-item'><a href='#' class='pure-menu-link'>HISTORY</a></li>
-                <li class='pure-menu-item'><a href='#' class='pure-menu-link'>GOVERNANCE</a></li>
+                <li class='pure-menu-item pure-menu-has-children pure-menu-allow-hover'>
+                  <a href='#!/governance' class='pure-menu-link'>GOVERNANCE</a>
+                  <ul class='pure-menu-children' id='govSubMenu'>
+                    <li class='pure-menu-item'><a href='#' class='pure-menu-link'>BYLAWS</a></li>
+                    <li class='pure-menu-item'><a href='#' class='pure-menu-link'>DUTIES</a></li>
+                    <li class='pure-menu-item'><a href='#' class='pure-menu-link'>HEIARCHY</a></li>
+                  </ul>
+                </li>
+                <li class='pure-menu-item'><a href='#!/membership' class='pure-menu-link'>MEMBERSHIP</a></li>
               </ul>
             </li>
           </div>
@@ -37,8 +45,13 @@
             </li>
           </div>
           <div>
-            <li class='pure-menu-item'>
+            <li class='pure-menu-item pure-menu-has-children pure-menu-allow-hover'>
               <a href='/#!/programs' class='pure-menu-link'>PROGRAMS</a>
+              <ul class='pure-menu-children' id='homeSubMenu'>
+                <li class='pure-menu-item'><a href='#!/mentor' class='pure-menu-link'>MENTOR</a></li>
+                <li class='pure-menu-item'><a href='#!/scholarship' class='pure-menu-link'>SCHOLARSHIP</a></li>
+                <li class='pure-menu-item'><a href='#!/volunteer' class='pure-menu-link'>VOLUNTEER</a></li>
+              </ul>
             </li>
           </div>
           <div>

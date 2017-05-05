@@ -54,39 +54,99 @@ h1 {
           text-align: center;
         }
 
-        #navbar>div {
-          display: inline-block;
-          background-color: rgb(244,115,33);
-          font-family: 'Cinzel';
-        }
-
-        #navbar>div>li {
-
-        }
-
-        #navbar>div>li>a {
-          color: black;
-          font-size: 20px;
-          font-weight: bold;
-        }
-
-        #navbar>div>li>a:visited {
-          background-color: rgb(244,115,33);
-        }
-
-        #navbar>div>li>a:hover {
-          background-color: rgba(24,128,33, .8);
-          color: white;
-          transition-duration: 1s;
-        }
-
-        @media screen and (max-width: 768px) {
-
             #navbar>div {
-              display: block;
+              display: inline-block;
+              background-color: rgb(244,115,33);
+              font-family: 'Cinzel';
             }
 
-        }
+                @media screen and (max-width: 768px) {
+                    #navbar>div {
+                      display: block;
+                    }
+                }
+
+                #navbar>div>li {
+                  padding-right: .5em;
+                  padding-left: .5em;
+                }
+
+                    #navbar>div>li>a {
+                      color: black;
+                      font-size: 20px;
+                      font-weight: bold;
+                    }
+
+                        #navbar>div>li>a:visited {
+                          background-color: rgb(244,115,33);
+                        }
+
+                        #navbar>div>li>a:hover {
+                          background-color: rgba(24,128,33, .8);
+                          color: white;
+                          transition-duration: .5s;
+                        }
+
+                    #homeSubMenu {
+                      width: 100%;
+                      border-left: 1px solid black;
+                      border-right: 1px solid black;
+                      border-top: 1px solid black;
+                      text-align: left;
+                      background-color: rgba(24,128,33, 1);
+                      -webkit-animation: dropDownDelay .5s linear; /* Safari, Chrome and Opera > 12.1 */
+                      animation-name: dropDownDelay .5s linear;
+                    }
+
+                        @keyframes dropDownDelay {
+                          0% {opacity: 0}
+                          100% {opacity: 1}
+                        }
+
+                        #homeSubMenu>li {
+                          border-bottom: 1px solid black;
+                        }
+
+                        #homeSubMenu>li>a {
+                          color: white;
+                        }
+
+                            #homeSubMenu>li>a:visited {
+                              background-color: rgba(24,128,33, 1);
+                            }
+
+                            #homeSubMenu>li>a:hover {
+                              background-color: orangered;
+                            }
+
+                        #govSubMenu {
+                          border-left: 1px solid black;
+                          border-right: 1px solid black;
+                          border-top: 1px solid black;
+                          margin-top: -25%;
+                          margin-left: 101%;
+                          width: 100%;
+                          text-align: left;
+                          background-color: rgba(24,128,33, 1);
+                          -webkit-animation: dropDownDelay .5s linear; /* Safari, Chrome and Opera > 12.1 */
+                          animation-name: dropDownDelay .5s linear;
+                        }
+
+                            #govSubMenu>li {
+                              border-bottom: 1px solid black;
+                            }
+
+                            #govSubMenu>li>a {
+                              color: white;
+                            }
+
+                                #govSubMenu>li>a:visited {
+                                  background-color: rgba(24,128,33, 1);
+                                }
+
+                                #govSubMenu>li>a:hover {
+                                  background-color: orangered;
+                                }
 
     #mainBodyContainer {
       width: 100%;

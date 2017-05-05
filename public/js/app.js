@@ -78,6 +78,12 @@
           templateUrl: '../partials/index.html',
           controller: 'imageCycle'
         })
+        .when('/governance', {
+          templateUrl: '../partials/governance.html'
+        })
+        .when('/membership', {
+          templateUrl: '../partials/membership.html'
+        })
         .when('/mission', {
           templateUrl: '../partials/mission.html'
         })
