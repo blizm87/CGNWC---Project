@@ -91,6 +91,9 @@
           templateUrl: '../partials/contactUs.html',
           controller: 'boardMembers'
         })
+        .when('/donate', {
+          templateUrl: '../partials/donate.html'
+        })
         .otherwise({
           rediretTo: '/'
         })

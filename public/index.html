@@ -19,11 +19,16 @@
       <img class='pure-img' id="mainLogo" src='./assets/orgLogos/logo1.png'>
     </header>
 
-    <div class='pure-g pure-u-1 pure-menu-horizontal' id='navContainer'>
+    <div class='pure-g pure-u-1 pure-menu-horizontal pure-menu' id='navContainer'>
       <ul class='pure-menu-list myNav' id='navbar'>
           <div>
-            <li class='pure-menu-item'>
+            <li class='pure-menu-item pure-menu-has-children pure-menu-allow-hover'>
               <a href='/#!/' class='pure-menu-link'>HOME</a>
+              <ul class='pure-menu-children'>
+                <li class='pure-menu-item'><a href='#' class='pure-menu-link'>ABOUT US</a></li>
+                <li class='pure-menu-item'><a href='#' class='pure-menu-link'>HISTORY</a></li>
+                <li class='pure-menu-item'><a href='#' class='pure-menu-link'>GOVERNANCE</a></li>
+              </ul>
             </li>
           </div>
           <div>
@@ -44,6 +49,11 @@
           <div>
             <li class='pure-menu-item'>
               <a href='/#!/contactUs' class='pure-menu-link'>CONTACT US</a>
+            </li>
+          </div>
+          <div>
+            <li class='pure-menu-item'>
+              <a href='/#!/donate' class='pure-menu-link'>DONATE</a>
             </li>
           </div>
       </ul>
