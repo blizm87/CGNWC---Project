@@ -7,6 +7,19 @@
     .controller('imageCycle', cycleImage)
     .controller('boardMembers', boardMembers)
     .controller('tableFix', tableFix)
+    .controller('tableDataPop', ['$scope', '$http', tableDataPop])
+
+    function tableDataPop($scope, $http) {
+      $http
+        .get('/events')
+        .then(function(response){
+          console.log(response.data.results)
+          $scope.eventArr = response.data.results;
+        }, function(err){
+          console.log(err)
+        })
+
+    }
 
     function tableFix(){
       // Change the selector if needed
@@ -110,7 +123,8 @@
         })
         .when('/events', {
           templateUrl: '../partials/events.html',
-          controller: 'tableFix'
+          controller: 'tableFix',
+          controller: 'tableDataPop'
         })
         .when('/contactUs', {
           templateUrl: '../partials/contactUs.html',

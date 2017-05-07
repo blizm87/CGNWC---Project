@@ -16,9 +16,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // ROUTES
+const eventRoutes = require('./src/routes/event.js');
 const memberRoutes = require('./src/routes/member.js');
 const adminRoutes = require('./src/routes/admin.js');
 
+app.use('/events', eventRoutes);
 app.use('/members', memberRoutes);
 app.use('/admin', adminRoutes)
 

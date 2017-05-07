@@ -1,7 +1,6 @@
 <div class='eventsContainer'>
   <div class='eventsContent'>
     <h1>Events</h1>
-
     <div class='eventPlanner'>
       <table class='pure-table pure-table-striped'>
         <thead>
@@ -13,55 +12,11 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>January 13, 2017</td>
-            <td>7:30PM - 9:00PM</td>
-            <td>Kick Off and Meet &amp; Greet</td>
-            <td>Ritz Carlton<br>Coconut Grove, FL</td>
-          </tr>
-          <tr>
-            <td>Saturday, February</td>
-            <td>TBA</td>
-            <td>CGNWC College Fair</td>
-            <td>Double Tree Airport Hotel</td>
-          </tr>
-          <tr>
-            <td>Saturday, February</td>
-            <td>TBA</td>
-            <td>CGNWC College Fair</td>
-            <td>Double Tree Airport Hotel</td>
-          </tr>
-          <tr>
-            <td>Saturday, February</td>
-            <td>TBA</td>
-            <td>CGNWC College Fair</td>
-            <td>Double Tree Airport Hotel</td>
-          </tr>          <tr>
-            <td>Saturday, February</td>
-            <td>TBA</td>
-            <td>CGNWC College Fair</td>
-            <td>Double Tree Airport Hotel</td>
-          </tr>          <tr>
-            <td>Saturday, February</td>
-            <td>TBA</td>
-            <td>CGNWC College Fair</td>
-            <td>Double Tree Airport Hotel</td>
-          </tr>
-          <tr>
-            <td>Saturday, February</td>
-            <td>TBA</td>
-            <td>CGNWC College Fair</td>
-            <td>Double Tree Airport Hotel</td>
-          </tr>          <tr>
-            <td>Saturday, February</td>
-            <td>TBA</td>
-            <td>CGNWC College Fair</td>
-            <td>Double Tree Airport Hotel</td>
-          </tr>          <tr>
-            <td>Saturday, February</td>
-            <td>TBA</td>
-            <td>CGNWC College Fair</td>
-            <td>Double Tree Airport Hotel</td>
+          <tr ng-repeat="event in eventArr">
+            <td>{{event.e_date}}</td>
+            <td>{{event.e_time}}</td>
+            <td>{{event.e_desc}}</td>
+            <td>{{event.e_loc}}<br>{{event.e_add}}</td>
           </tr>
         </tbody>
       </table>
