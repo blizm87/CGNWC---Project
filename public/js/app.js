@@ -6,6 +6,24 @@
     .config(routes)
     .controller('imageCycle', cycleImage)
     .controller('boardMembers', boardMembers)
+    .controller('tableFix', tableFix)
+
+    function tableFix(){
+      // Change the selector if needed
+      var $table = $('table'),
+          $bodyCells = $table.find('tbody tr:first').children(),
+          colWidth;
+
+      // Get the tbody columns width array
+      colWidth = $bodyCells.map(function() {
+          return $(this).width();
+      }).get();
+
+      // Set the width of thead columns
+      $table.find('thead tr').children().each(function(i, v) {
+          $(v).width(colWidth[i]);
+      });
+    }
 
     boardMembers.$inject = ['$http']
     function boardMembers($http){
@@ -91,7 +109,8 @@
           templateUrl: '../partials/programs.html'
         })
         .when('/events', {
-          templateUrl: '../partials/events.html'
+          templateUrl: '../partials/events.html',
+          controller: 'tableFix'
         })
         .when('/contactUs', {
           templateUrl: '../partials/contactUs.html',
