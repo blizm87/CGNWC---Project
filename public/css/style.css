@@ -324,21 +324,20 @@ h1 {
                           max-height: 300px;
                           margin: 0 auto;
                           background-color: white;
-                          overflow: scroll;
                         }
 
                             .eventPlanner>table>thead {
-                              width: 100%;
-                              padding-top: .3em;
-                              padding-bottom: .3em;
-                              display: inline-block;
                               text-align: center;
                             }
 
+                                .eventPlanner>table>thead>tr>th {
+                                  padding-top: .8em;
+                                  padding-bottom: .8em;
+                                }
+
                             .eventPlanner>table>tbody {
                               width: 100%;
-                              display: inline-block;
-                              max-height: 300px;
+                              max-height: 225px;
                               overflow: scroll;
                             }
 

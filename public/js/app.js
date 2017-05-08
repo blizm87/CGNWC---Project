@@ -5,9 +5,9 @@
     .module('cgnwcApp', ['ngRoute'])
     .config(routes)
     .controller('imageCycle', cycleImage)
-    .controller('boardMembers', boardMembers)
-    .controller('tableFix', tableFix)
+    .controller('boardMembers', ['$http', boardMembers])
     .controller('tableDataPop', ['$scope', '$http', tableDataPop])
+
 
     function tableDataPop($scope, $http) {
       $http
@@ -18,27 +18,41 @@
         }, function(err){
           console.log(err)
         })
+        // .then(function(){
+        //   console.log('i am tablefix')
+        //   // Change the selector if needed
+        //   var $table = $('table'),
+        //       $bodyCells = $table.find('tbody tr:first').children(),
+        //       colWidth;
 
+        //   // Get the tbody columns width array
+        //   colWidth = $bodyCells.map(function() {
+        //       return $(this).width();
+        //   }).get();
+
+        //   // Set the width of thead columns
+        //   $table.find('thead tr').children().each(function(i, v) {
+        //       $(v).width(colWidth[i]);
+        //   })
+        // })
+        // .then(function(){
+        //   // Change the selector if needed
+        //   var $table = $('table'),
+        //       $bodyCells = $table.find('tbody tr:first').children(),
+        //       colHeight;
+
+        //   // Get the tbody columns width array
+        //   colHeight = $bodyCells.map(function() {
+        //       return $(this).height();
+        //   }).get();
+
+        //   // Set the width of thead columns
+        //   $table.find('tbody tr').children().each(function(i, v) {
+        //       $(v).height(colHeight[i]);
+        //   })
+        // })
     }
 
-    function tableFix(){
-      // Change the selector if needed
-      var $table = $('table'),
-          $bodyCells = $table.find('tbody tr:first').children(),
-          colWidth;
-
-      // Get the tbody columns width array
-      colWidth = $bodyCells.map(function() {
-          return $(this).width();
-      }).get();
-
-      // Set the width of thead columns
-      $table.find('thead tr').children().each(function(i, v) {
-          $(v).width(colWidth[i]);
-      });
-    }
-
-    boardMembers.$inject = ['$http']
     function boardMembers($http){
       var vm = this;
       vm.board = [];
@@ -123,7 +137,6 @@
         })
         .when('/events', {
           templateUrl: '../partials/events.html',
-          controller: 'tableFix',
           controller: 'tableDataPop'
         })
         .when('/contactUs', {
