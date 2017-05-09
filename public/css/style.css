@@ -300,6 +300,36 @@ h1 {
               height: 100%;
             }
 
+                .progSecContainer {
+                  width: 90%;
+                  border-left: 1px solid black;
+                  border-right: 1px solid black;
+                  border-top: 1px solid black;
+                  margin: 0 auto;
+                }
+
+                    .progSecContainer>section {
+                      border-bottom: 1px solid black;
+                    }
+
+                        .mentoring {
+                          text-align: center;
+                          padding-bottom: 2em;
+                        }
+
+                            #mentAppPic {
+                              margin: 0 auto;
+                              display: block;
+                            }
+
+                        .scholarship {
+
+                        }
+
+                        .volunteer {
+                          padding-bottom: 1em;
+                        }
+
             .eventsContainer {
               width: 100%;
               height: 100%;

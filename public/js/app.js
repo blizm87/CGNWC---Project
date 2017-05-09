@@ -4,12 +4,12 @@
   angular
     .module('cgnwcApp', ['ngRoute'])
     .config(routes)
-    .controller('imageCycle', cycleImage)
-    .controller('boardMembers', ['$http', boardMembers])
-    .controller('tableDataPop', ['$scope', '$http', tableDataPop])
+    .controller('indexCtrl', indexCtrl)
+    .controller('contactCtrl', ['$http', contactCtrl])
+    .controller('eventCtrl', ['$scope', '$http', eventCtrl])
 
 
-    function tableDataPop($scope, $http) {
+    function eventCtrl($scope, $http) {
       $http
         .get('/events')
         .then(function(response){
@@ -53,7 +53,7 @@
         // })
     }
 
-    function boardMembers($http){
+    function contactCtrl($http){
       var vm = this;
       vm.board = [];
       const $brdMemCont = $('.boardMembersContainer')
@@ -82,7 +82,7 @@
         })
     }
 
-    function cycleImage(){
+    function indexCtrl(){
       let slideIndex = 0;
       let $indSlideContainer = $('.indSlideContainer');
       let $tempSlide = $('.tempSlide');
@@ -121,7 +121,7 @@
       $routeProvider
         .when('/', {
           templateUrl: '../partials/index.html',
-          controller: 'imageCycle'
+          controller: 'indexCtrl'
         })
         .when('/governance', {
           templateUrl: '../partials/governance.html'
@@ -137,11 +137,11 @@
         })
         .when('/events', {
           templateUrl: '../partials/events.html',
-          controller: 'tableDataPop'
+          controller: 'eventCtrl'
         })
         .when('/contactUs', {
           templateUrl: '../partials/contactUs.html',
-          controller: 'boardMembers'
+          controller: 'contactCtrl'
         })
         .when('/donate', {
           templateUrl: '../partials/donate.html'
