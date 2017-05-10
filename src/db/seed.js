@@ -15,6 +15,8 @@ var cgnwcMember = new member({
   title: 'Web Developer'
 })
 
+    cgnwcMember.save()
+
 var cgnwcEvent = new event({
   _id: 5678901234,
   e_date: 'January 13, 2017',
@@ -23,14 +25,5 @@ var cgnwcEvent = new event({
   e_loc: 'Ritz Carlton',
   e_add: 'Coconut Grove, FL'
 })
-
-  if(cgnwcMember.save()) {
-    cgnwcMember.save()
-  }
-
-
-
-  if(cgnwcEvent.save()) {
     cgnwcEvent.save();
-  }
 
