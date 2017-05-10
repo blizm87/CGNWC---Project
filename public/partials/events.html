@@ -18,7 +18,7 @@
             <td>{{event.e_time}}</td>
             <td>{{event.e_desc}}</td>
             <td>{{event.e_loc}}<br><br>{{event.e_add}}</td>
-            <td><button class='pure-button' id='eventDeleteBtn'>Delete <span>{{event._id}}</span></button></td>
+            <td><button class='eventDeleteBtn' ng-value="{{event._id}}">Delete</button></td>
           </tr>
         </tbody>
       </table>

@@ -19,12 +19,9 @@
           console.log(err)
         })
 
-      const $deleteBtn = $('#eventDeleteBtn');
-
-      $('table').on('click', '#eventDeleteBtn', function(){
-        console.log('I am Delete.val: ' + $('#eventDeleteBtn>span').text())
+      $('table').on('click', '.eventDeleteBtn', function(evt){
         $http
-          .delete(`/events/${$('#eventDeleteBtn>span').text()}`)
+          .delete(`/events/${evt.target.value}`)
           .then(function(response){
             console.log(response)
           }, function(err){
