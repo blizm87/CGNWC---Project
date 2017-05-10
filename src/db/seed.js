@@ -6,6 +6,7 @@ const member = require('../models/members.js')
 const event = require('../models/events.js')
 
 var cgnwcMember = new member({
+  _id: 1234567890,
   f_name: 'Justin',
   m_name: 'Kyle',
   l_name: 'Samuels',
@@ -16,6 +17,7 @@ var cgnwcMember = new member({
 cgnwcMember.save();
 
 var cgnwcEvent = new event({
+  _id: 1234567890,
   e_date: 'January 13, 2017',
   e_time: '7:30PM - 9:00PM',
   e_desc: 'Kick Off and Meet & Greet',
