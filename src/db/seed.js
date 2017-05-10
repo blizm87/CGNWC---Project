@@ -5,6 +5,7 @@ require('./config.js');
 const member = require('../models/members.js')
 const event = require('../models/events.js')
 
+// POPULATE SCHEMA
 var cgnwcMember = new member({
   _id: 1234567890,
   f_name: 'Justin',
@@ -13,16 +14,6 @@ var cgnwcMember = new member({
   fullName: 'Justin Kyle Samuels',
   title: 'Web Developer'
 })
-
-member.find({_id: 1234567890}, function(error, member){
-  if(error) {
-    console.log(error)
-    cgnwcMember.save();
-  } else {
-      console.log('Member seed data is already present!')
-  }
-})
-
 
 var cgnwcEvent = new event({
   _id: 5678901234,
@@ -33,14 +24,13 @@ var cgnwcEvent = new event({
   e_add: 'Coconut Grove, FL'
 })
 
-event.find({_id: 5678901234}, function(error, event){
-  if(error) {
-    console.log(error)
-    cgnwcEvent.save();
-  } else {
-      console.log('Event seed data is already present!')
+  if(cgnwcMember.save()) {
+    cgnwcMember.save()
   }
-})
 
-cgnwcEvent.save();
+
+
+  if(cgnwcEvent.save()) {
+    cgnwcEvent.save();
+  }
 

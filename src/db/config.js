@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.Promise = Promise
+// mongoose.Promise = Promise
 const url = process.env.MONGODB_URI || 'mongodb://localhost/cgnwc'
 
 mongoose.connect(url)
