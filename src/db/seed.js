@@ -14,9 +14,16 @@ var cgnwcMember = new member({
   title: 'Web Developer'
 })
 
-console.log('I am seed after config before first save');
-cgnwcMember.save();
-console.log('I am seed after first save');
+member.find({_id: 1234567890}, function(error, member){
+  if(error) {
+    console.log(error)
+    cgnwcMember.save();
+  } else {
+      console.log('Member seed data is already present!')
+  }
+})
+
+
 var cgnwcEvent = new event({
   _id: 1234567890,
   e_date: 'January 13, 2017',
@@ -26,6 +33,14 @@ var cgnwcEvent = new event({
   e_add: 'Coconut Grove, FL'
 })
 
+event.find({_id: 1234567890}, function(error, event){
+  if(error) {
+    console.log(error)
+    cgnwcEvent.save();
+  } else {
+      console.log('Event seed data is already present!')
+  }
+})
+
 cgnwcEvent.save();
-console.log('I am seed after second save');
 
