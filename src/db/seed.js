@@ -1,5 +1,5 @@
 console.log('I am the seed before it runs');
-require('./config.js');
+require('./configSeed.js');
 
 // REQUIRE MODELS
 const member = require('../models/members.js')
