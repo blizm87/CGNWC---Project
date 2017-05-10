@@ -14,8 +14,9 @@ var cgnwcMember = new member({
   title: 'Web Developer'
 })
 
+console.log('I am seed after config before first save');
 cgnwcMember.save();
-
+console.log('I am seed after first save');
 var cgnwcEvent = new event({
   _id: 1234567890,
   e_date: 'January 13, 2017',
@@ -26,3 +27,4 @@ var cgnwcEvent = new event({
 })
 
 cgnwcEvent.save();
+console.log('I am seed after second save');
