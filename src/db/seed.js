@@ -17,7 +17,7 @@ var cgnwcMember = new member({
 cgnwcMember.save();
 
 var cgnwcEvent = new event({
-  _id: 2345678901,
+  _id: 1234567890,
   e_date: 'January 13, 2017',
   e_time: '7:30PM - 9:00PM',
   e_desc: 'Kick Off and Meet & Greet',

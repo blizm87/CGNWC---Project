@@ -32,4 +32,14 @@ router.post('/', (req, res, next) =>{
   })
 })
 
+router.delete('/:id', (req, res, next) => {
+  Events.findOneAndRemove({_id: req.params.id}, function(err){
+    if(err) {
+      console.log(err);
+    }
+
+    console.log('Event has sucessfully been deleted!');
+  })
+})
+
 module.exports = router

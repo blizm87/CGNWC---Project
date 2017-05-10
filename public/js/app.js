@@ -18,39 +18,27 @@
         }, function(err){
           console.log(err)
         })
-        // .then(function(){
-        //   console.log('i am tablefix')
-        //   // Change the selector if needed
-        //   var $table = $('table'),
-        //       $bodyCells = $table.find('tbody tr:first').children(),
-        //       colWidth;
 
-        //   // Get the tbody columns width array
-        //   colWidth = $bodyCells.map(function() {
-        //       return $(this).width();
-        //   }).get();
+      const $deleteBtn = $('#eventDeleteBtn');
 
-        //   // Set the width of thead columns
-        //   $table.find('thead tr').children().each(function(i, v) {
-        //       $(v).width(colWidth[i]);
-        //   })
-        // })
-        // .then(function(){
-        //   // Change the selector if needed
-        //   var $table = $('table'),
-        //       $bodyCells = $table.find('tbody tr:first').children(),
-        //       colHeight;
-
-        //   // Get the tbody columns width array
-        //   colHeight = $bodyCells.map(function() {
-        //       return $(this).height();
-        //   }).get();
-
-        //   // Set the width of thead columns
-        //   $table.find('tbody tr').children().each(function(i, v) {
-        //       $(v).height(colHeight[i]);
-        //   })
-        // })
+      $('table').on('click', '#eventDeleteBtn', function(){
+        console.log('I am Delete.val: ' + $('#eventDeleteBtn>span').text())
+        $http
+          .delete(`/events/${$('#eventDeleteBtn>span').text()}`)
+          .then(function(response){
+            console.log(response)
+          }, function(err){
+            console.log(err)
+          })
+        $http
+          .get('/events')
+          .then(function(response){
+            console.log(response.data.results)
+            $scope.eventArr = response.data.results;
+          }, function(err){
+            console.log(err)
+          })
+      })
     }
 
     function contactCtrl($http){
