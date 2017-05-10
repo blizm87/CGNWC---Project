@@ -29,13 +29,3 @@ var cgnwcEvent = new event({
 cgnwcEvent.save();
 console.log('I am seed after second save');
 
-var cgnwcEventTwo = new event({
-  _id: 5678901234,
-  e_date: 'January 13, 2017',
-  e_time: '7:30PM - 9:00PM',
-  e_desc: 'Kick Off and Meet & Greet',
-  e_loc: 'Ritz Carlton',
-  e_add: 'Coconut Grove, FL'
-})
-
-cgnwcEventTwo.save();
