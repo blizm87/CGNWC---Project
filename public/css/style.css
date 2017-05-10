@@ -373,8 +373,70 @@ h1 {
 
                                 .eventDeleteBtn {
                                   background-color: red;
-                                  border: 1px solid black;
+                                  padding: .5em;
+                                  border: 3px outset red;
                                   font-weight: bold;
+                                  outline: none;
+                                }
+
+                                    .eventDeleteBtn:visited {
+                                      text-decoration: none;
+                                    }
+
+                                    .eventDeleteBtn:active {
+                                      border: 3px inset red;
+                                    }
+
+                        #addEventBtn {
+                          background-color: skyblue;
+                          text-decoration: underline;
+                          border: none;
+
+                        }
+
+                        #eventCreateForm {
+                          margin: 0 auto;
+                          background-color: rgba(54, 139, 193,.5);
+                          padding: 3em;
+                          font-size: 18px;
+                          display: none;
+                        }
+
+                            .formContainer {
+                              text-align: left;
+                            }
+
+                            .topHalfContainer {
+
+                            }
+
+                                .firSectContainer {
+                                  display: inline-block;
+                                }
+
+                                .secSectContainer {
+                                  margin-left: 20%;
+                                  display: inline-block;
+                                }
+
+                            .bottomHalfContainer {
+                              margin-top: 2em;
+                            }
+                            .eventCreateBtn {
+                              margin-top: 1em;
+                              background-color: limegreen;
+                              padding: .5em 1em .5em 1em;
+                              border: 3px outset limegreen;
+                              font-weight: bold;
+                              outline: none;
+                            }
+
+                                .eventCreateBtn:visited {
+                                  text-decoration: none;
+                                }
+
+                                .eventCreateBtn:active {
+                                  border: 3px inset limegreen;
                                 }
 
                     #calender {
