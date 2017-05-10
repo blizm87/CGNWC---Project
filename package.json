@@ -18,7 +18,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "seed": "node src/db/seed.js",
-    "postinstall": "node src/db/seed.js"
+    "heroku-postbuild": "node src/db/seed.js"
   },
   "repository": {
     "type": "git",
