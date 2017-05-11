@@ -38,7 +38,7 @@ router.post('/', (req, res, next) =>{
   newEvent.save();
   console.log(process.env.PORT)
   const url = 'localhost:'+process.env.PORT+'/#!/events' || 'localhost:3000/#!/events';
-
+  console.log(url)
   res.redirect(url)
 })
 
