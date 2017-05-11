@@ -21,7 +21,7 @@
 
       $('table').on('click', '.eventDeleteBtn', function(evt){
         $http
-          .delete(`/events/${evt.target.value}`)
+          .delete(`/events/${evt.target.name}`)
           .then(function(response){
             console.log(response)
           }, function(err){

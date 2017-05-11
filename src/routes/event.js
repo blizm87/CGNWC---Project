@@ -19,24 +19,32 @@ router.get('/', (req, res, next) => {
 router.post('/', (req, res, next) =>{
   console.log('I AM THE POST FOR ADDING EVENT')
   console.log(req.body)
+  console.log(Id)
+  var strId = Id.toString();
+  console.log(typeof strId)
 
   var newEventData = {
     'e_date': req.body.date,
     'e_time': req.body.time,
     'e_desc': req.body.description,
     'e_loc': req.body.location,
-    'e_add': req.body.address
+    'e_add': req.body.address,
+    'myId': strId
   }
 
   console.log(newEventData)
 
   var newEvent = new Events(newEventData)
   newEvent.save();
+  console.log(process.env.PORT)
+  const url = 'localhost:'+process.env.PORT+'/#!/events' || 'localhost:3000/#!/events';
+
+  res.redirect(url)
 })
 
 router.delete('/:id', (req, res, next) => {
   console.log('I AM THE DELETE BUTTON')
-  Events.findOneAndRemove({_id: req.params.id}, function(err){
+  Events.findOneAndRemove({myId: req.params.id}, function(err){
     if(err) {
       console.log(err);
     }

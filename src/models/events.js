@@ -6,6 +6,7 @@ var eventSchema = new mongoose.Schema({
   'e_desc': String,
   'e_loc': String,
   'e_add': String,
+  'myId': String,
   createdAt: { type: Date, default: Date.now }
 });
 
