@@ -36,6 +36,17 @@
             console.log(err)
           })
       })
+      const $addEventBtn = $('#addEventBtn')
+      const $eventCreateForm = $('#eventCreateForm')
+      let num = 0
+      $addEventBtn.on('click', function(){
+        num++
+        if(num%2 == true){
+          $eventCreateForm.slideDown();
+        } else {
+            $eventCreateForm.slideUp();
+        }
+      })
     }
 
     function contactCtrl($http){
