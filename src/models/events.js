@@ -1,7 +1,6 @@
 var mongoose = require('mongoose');
 
 var eventSchema = new mongoose.Schema({
-  '_id': Number,
   'e_date': String,
   'e_time': String,
   'e_desc': String,

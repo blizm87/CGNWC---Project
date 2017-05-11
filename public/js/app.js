@@ -38,6 +38,7 @@
       })
       const $addEventBtn = $('#addEventBtn')
       const $eventCreateForm = $('#eventCreateForm')
+      $eventCreateForm.stopPropagation;
       let num = 0
       $addEventBtn.on('click', function(){
         num++

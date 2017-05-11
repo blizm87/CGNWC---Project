@@ -26,26 +26,26 @@
       <div class='addEntryContainer'>
         <button id='addEventBtn'>Add Event</button>
         <div class='dropDownContainer'>
-          <form class='pure-form' id='eventCreateForm'>
+          <form class='pure-form' id='eventCreateForm' method='POST' action='/events'>
             <div class='formContainer'>
               <section class='topHalfContainer'>
                 <section class='firSectContainer'>
                   Date:<br>
-                  <input type='text' placeholder='Date' class='pure-input-1'><br><br>
+                  <input type='text' name='date' placeholder='Date' class='pure-input-1'><br><br>
                   Time:<br>
-                  <input type='text' placeholder='Time' class='pure-input-1'>
+                  <input type='text' name='time' placeholder='Time' class='pure-input-1'>
                 </section>
                 <section class='secSectContainer'>
                   Location:<br>
-                  <input type='text' placeholder='Location' class='pure-input-1'><br><br>
+                  <input type='text' name='location' placeholder='Location' class='pure-input-1'><br><br>
                   Address:<br>
-                  <input type='text' placeholder='Address' class='pure-input-1'>
+                  <input type='text' name='address' placeholder='Address' class='pure-input-1'>
                 </section>
               </section>
               <section class='bottomHalfContainer'>
                 <section class='thirdSectContainer'>
                   Description:<br>
-                  <textarea type='text' placeholder='Description' class='pure-input-1-3'></textarea>
+                  <textarea type='text' name='description' placeholder='Description' class='pure-input-1-2'></textarea>
                 </section>
               </section>
             </div>
