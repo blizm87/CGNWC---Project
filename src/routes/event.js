@@ -18,11 +18,7 @@ router.get('/', (req, res, next) => {
 
 router.post('/', (req, res, next) =>{
   console.log('I AM THE POST FOR ADDING EVENT')
-  console.log(req.body)
-  console.log(Id)
   var strId = Id.toString();
-  console.log(typeof strId)
-
   var newEventData = {
     'e_date': req.body.date,
     'e_time': req.body.time,
@@ -32,14 +28,9 @@ router.post('/', (req, res, next) =>{
     'myId': strId
   }
 
-  console.log(newEventData)
-
   var newEvent = new Events(newEventData)
   newEvent.save();
-  console.log(process.env.PORT)
-  const url = 'localhost:'+process.env.PORT+'/#!/events' || 'localhost:3000/#!/events';
-  console.log(url)
-  res.redirect(url)
+
 })
 
 router.delete('/:id', (req, res, next) => {

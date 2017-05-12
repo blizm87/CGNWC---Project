@@ -13,7 +13,6 @@
       $http
         .get('/events')
         .then(function(response){
-          console.log(response.data.results)
           $scope.eventArr = response.data.results;
         }, function(err){
           console.log(err)
@@ -36,10 +35,16 @@
             console.log(err)
           })
       })
+
       const $addEventBtn = $('#addEventBtn')
       const $eventCreateForm = $('#eventCreateForm')
-      $eventCreateForm.stopPropagation;
+      const $date = $('#createEventDate')
+      const $time = $('#createEventTime')
+      const $location = $('#createEventLocation')
+      const $address = $('#createEventAddress')
+      const $description = $('#createEventDescription')
       let num = 0
+
       $addEventBtn.on('click', function(){
         num++
         if(num%2 == true){
@@ -47,6 +52,31 @@
         } else {
             $eventCreateForm.slideUp();
         }
+      })
+
+      $eventCreateForm.on('click', '.eventCreateBtn', function(){
+        var submission = {
+          'date': $date[0].value,
+          'time': $time[0].value,
+          'location': $location[0].value,
+          'address': $address[0].value,
+          'description': $description[0].value
+        }
+        $http
+          .post('/events', submission)
+
+        $http
+          .get('/events')
+          .then(function(response){
+            $scope.eventArr = response.data.results;
+            $date[0].value = ' ';
+            $time[0].value = ' ';
+            $location[0].value = ' ';
+            $address[0].value = ' ';
+            $description[0].value = ' ';
+          }, function(err){
+            console.log(err)
+          })
       })
     }
 
