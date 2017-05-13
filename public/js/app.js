@@ -37,13 +37,13 @@
           });
         });
       }
-      tableFix2();
+      // tableFix2();
       //  POPULATE TABLE DATA
       $http
         .get('/events')
         .then(function(response){
           $scope.eventArr = response.data.results;
-          tableFix();
+          // tableFix();
         }, function(err){
           console.log(err)
         })
@@ -97,6 +97,7 @@
         $http
           .post('/events', submission)
 
+      // CLEARS INPUT VALUE
         $http
           .get('/events')
           .then(function(response){
@@ -147,11 +148,6 @@
       let $tempSlide = $('.tempSlide');
 
       setInterval(function(){
-        // if(slideIndex === 0){
-        //   $indSlideContainer[slideIndex].style.display = 'block';
-        //   $tempSlide[0].style.display = 'none';
-        //   // angular.element($indSlideContainer[slideIndex]).addClass('slideOut');
-        // }
         for(var i = 0; i < $indSlideContainer.length; i++){
           $indSlideContainer[i].style.display = 'none';
         }
@@ -160,14 +156,6 @@
         if(slideIndex >= $indSlideContainer.length) {
           slideIndex = 0;
         }
-
-        // if(slideIndex-1 === 0){
-        //   $indSlideContainer[slideIndex-1].style.display = 'none';
-        //   $indSlideContainer[slideIndex+2].style.display = 'none';
-        // } else {
-        //     $indSlideContainer[slideIndex-2].style.display = 'none';
-        //   }
-        // angular.element($indSlideContainer[slideIndex-1]).removeClass('slideIn')
 
         $tempSlide[0].style.display = 'none';
         $indSlideContainer[slideIndex].style.display = 'block';
