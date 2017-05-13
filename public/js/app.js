@@ -10,14 +10,45 @@
 
 
     function eventCtrl($scope, $http) {
+      //  FIX IN-TABLE DISPLAY
+      function tableFix(){
+        var $table = $('table'),
+            $bodyCells = $table.find('tbody tr:first').children(),
+            colWidth;
+
+        // Get the tbody columns width array
+        colWidth = $bodyCells.map(function() {
+            return $(this).width();
+        }).get();
+
+        // Set the width of thead columns
+        $table.find('thead tr').children().each(function(i, v) {
+            $(v).width(colWidth[i]);
+        });
+        console.log('I am table Fix')
+      }
+
+      function tableFix2(){
+        $(document).ready(function() {
+          $('table').DataTable({
+              "scrollY":        "200px",
+              "scrollCollapse": true,
+              "paging":         false
+          });
+        });
+      }
+      tableFix2();
+      //  POPULATE TABLE DATA
       $http
         .get('/events')
         .then(function(response){
           $scope.eventArr = response.data.results;
+          tableFix();
         }, function(err){
           console.log(err)
         })
 
+      //  DELETE TD DATA INSTANCE
       $('table').on('click', '.eventDeleteBtn', function(evt){
         $http
           .delete(`/events/${evt.target.name}`)
@@ -54,6 +85,7 @@
         }
       })
 
+      //  CREATES A NEW EVENT ENTRY IN DATABASE
       $eventCreateForm.on('click', '.eventCreateBtn', function(){
         var submission = {
           'date': $date[0].value,

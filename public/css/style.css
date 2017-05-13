@@ -340,6 +340,7 @@ h1 {
                 .eventsContent {
                   margin: 0 auto;
                   width: 90%;
+                  height: 100%;
                   text-align: center;
                   background-color: skyblue;
                   border: 10px outset lightblue;
@@ -351,9 +352,9 @@ h1 {
                     }
 
                         .eventPlanner>table {
+                          width: 800px;
                           border: 1px solid black;
                           background-color: white;
-                          overflow: scroll;
                           margin: 0 auto;
                         }
 
@@ -366,8 +367,7 @@ h1 {
                                 }
 
                             .eventPlanner>table>tbody {
-/*                              max-height: 225px;
-                              overflow: scroll;*/
+
                             }
 
                                 .eventDeleteBtn {
@@ -390,6 +390,10 @@ h1 {
 
                     }
 
+                        .dropDownContainer {
+
+                        }
+
                         #addEventBtn {
                           background-color: skyblue;
                           text-decoration: underline;
@@ -411,22 +415,21 @@ h1 {
                               text-align: left;
                             }
 
-                            .topHalfContainer {
-
-                            }
-
                                 .firSectContainer {
-                                  display: inline-block;
+
                                 }
 
-                                .secSectContainer {
-                                  margin-left: 20%;
-                                  display: inline-block;
+                                .secSectConatainer {
+
                                 }
 
-                            .bottomHalfContainer {
-                              margin-top: 2em;
-                            }
+                                .thirdSectContainer {
+                                  margin-top: 1em;
+                                }
+
+                                    .thirdSectContainer>textarea {
+                                      height: 5em;
+                                    }
 
                             .eventCreateBtn {
                               margin-top: 1em;
