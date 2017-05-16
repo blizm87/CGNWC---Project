@@ -12,32 +12,7 @@
     //  CONTROLLER FUNCTION HANDLER SECTION
 
     function contactCtrl($http){
-      // var vm = this;
-      // vm.board = [];
-      // const $brdMemCont = $('.boardMembersContainer')
-      // const $getMemb = $('.getMemb');
-      // let html;
-      // let htmlTemp;
-      // let conCat = [];
-      // $http
-      //   .get('/members?president=President&vicePresident=Vice-President')
-      //   .then(function(response){
-      //     let result = response.data.results;
-      //     result.forEach(function(obj){
-      //       // vm.board.push(obj);
-      //       htmlTemp = `<div class="pure-u-1-3 indBoardMembersContainer">
-      //                 <!-- <img> -->
-      //                 <p>${obj.title}</p>
-      //                 <p>${obj.fullName}</p>
-      //                 <p>Brief Description</p>
-      //                 </div>`;
-      //       conCat.push(htmlTemp)
-      //     });
-      //     html = conCat[0] + conCat[1] + conCat[2];
-      //     $brdMemCont.append(html);
-      //   }, function(err){
-      //     console.log(err);
-      //   })
+
     }
 
     function eventCtrl($scope, $http) {

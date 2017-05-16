@@ -458,9 +458,24 @@ h1 {
             }
 
                 .contactUsContentContainer {
-                  border: 1px solid black;
+                  width: 90%;
+                  margin: 0 auto;
+                  background-color: lightgrey;
+                  border: 10px outset white;
                   text-align: center;
                 }
+
+                    #indSectContainer {
+
+                    }
+
+                        #indSectContainer>section {
+                          font-family: 'Taviraj';
+                        }
+
+                        #indSectContainer>section>img {
+                          width: 100px;
+                        }
 
             .donateContainer {
 
