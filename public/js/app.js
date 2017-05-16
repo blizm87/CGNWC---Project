@@ -5,9 +5,40 @@
     .module('cgnwcApp', ['ngRoute'])
     .config(routes)
     .controller('indexCtrl', indexCtrl)
-    .controller('contactCtrl', ['$http', contactCtrl])
+    .controller('govCtrl', govCtrl)
     .controller('eventCtrl', ['$scope', '$http', eventCtrl])
+    .controller('contactCtrl', ['$http', contactCtrl])
 
+    //  CONTROLLER FUNCTION HANDLER SECTION
+
+    function contactCtrl($http){
+      // var vm = this;
+      // vm.board = [];
+      // const $brdMemCont = $('.boardMembersContainer')
+      // const $getMemb = $('.getMemb');
+      // let html;
+      // let htmlTemp;
+      // let conCat = [];
+      // $http
+      //   .get('/members?president=President&vicePresident=Vice-President')
+      //   .then(function(response){
+      //     let result = response.data.results;
+      //     result.forEach(function(obj){
+      //       // vm.board.push(obj);
+      //       htmlTemp = `<div class="pure-u-1-3 indBoardMembersContainer">
+      //                 <!-- <img> -->
+      //                 <p>${obj.title}</p>
+      //                 <p>${obj.fullName}</p>
+      //                 <p>Brief Description</p>
+      //                 </div>`;
+      //       conCat.push(htmlTemp)
+      //     });
+      //     html = conCat[0] + conCat[1] + conCat[2];
+      //     $brdMemCont.append(html);
+      //   }, function(err){
+      //     console.log(err);
+      //   })
+    }
 
     function eventCtrl($scope, $http) {
       //  FIX IN-TABLE DISPLAY
@@ -113,33 +144,8 @@
       })
     }
 
-    function contactCtrl($http){
-      var vm = this;
-      vm.board = [];
-      const $brdMemCont = $('.boardMembersContainer')
-      const $getMemb = $('.getMemb');
-      let html;
-      let htmlTemp;
-      let conCat = [];
-      $http
-        .get('/members?president=President&vicePresident=Vice-President')
-        .then(function(response){
-          let result = response.data.results;
-          result.forEach(function(obj){
-            // vm.board.push(obj);
-            htmlTemp = `<div class="pure-u-1-3 indBoardMembersContainer">
-                      <!-- <img> -->
-                      <p>${obj.title}</p>
-                      <p>${obj.fullName}</p>
-                      <p>Brief Description</p>
-                      </div>`;
-            conCat.push(htmlTemp)
-          });
-          html = conCat[0] + conCat[1] + conCat[2];
-          $brdMemCont.append(html);
-        }, function(err){
-          console.log(err);
-        })
+    function govCtrl() {
+      console.log('governance Controller')
     }
 
     function indexCtrl(){
@@ -164,6 +170,7 @@
 
     }
 
+    //  ANGULAR ROUTE HANDLER SECTION
     function routes($routeProvider){
       $routeProvider
         .when('/', {
@@ -171,7 +178,8 @@
           controller: 'indexCtrl'
         })
         .when('/governance', {
-          templateUrl: '../partials/governance.html'
+          templateUrl: '../partials/governance.html',
+          controller: 'govCtrl'
         })
         .when('/membership', {
           templateUrl: '../partials/membership.html'

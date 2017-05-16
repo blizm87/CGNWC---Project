@@ -457,13 +457,9 @@ h1 {
               height: 100%;
             }
 
-                .boardMembersContainer {
-                  text-align: center;
+                .contactUsContentContainer {
                   border: 1px solid black;
-                }
-
-                .indBoardMembersContainer {
-
+                  text-align: center;
                 }
 
             .donateContainer {
