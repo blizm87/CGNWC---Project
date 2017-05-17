@@ -202,13 +202,12 @@ body {
                                 100% {opacity: 0}
                             }
 
-                            .imgContainer {
-
-                            }
-
                                 .imgContent {
                                   width: 100%;
                                   max-height: 16em;
+                                  image-rendering: auto;
+                                  image-rendering: crisp-edges;
+                                  image-rendering: pixelated;
                                 }
 
                 .aboutUs {

@@ -7,11 +7,13 @@ const Events = require('../models/events.js');
 var Id = mongoose.Types.ObjectId();
 
 router.get('/', (req, res, next) => {
-
+  let invertedEventsArray = [];
   Events.find(function(error, events) {
     if(error) res.json({message: 'Could not find events!' + error});
-
-      res.json({results: events});
+    for(var i = events.length - 1; i >= 0; i--){
+      invertedEventsArray.push(events[i])
+    }
+      res.json({results: invertedEventsArray});
   });
 
 });
