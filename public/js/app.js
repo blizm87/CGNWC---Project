@@ -6,50 +6,28 @@
     .config(routes)
     .controller('indexCtrl', indexCtrl)
     .controller('govCtrl', govCtrl)
+    .controller('programCtrl', programCtrl)
     .controller('eventCtrl', ['$scope', '$http', eventCtrl])
     .controller('contactCtrl', ['$http', contactCtrl])
+    .controller('donateCtrl', donateCtrl)
 
     //  CONTROLLER FUNCTION HANDLER SECTION
+
+    function donateCtrl(){
+
+    }
 
     function contactCtrl($http){
 
     }
 
     function eventCtrl($scope, $http) {
-      //  FIX IN-TABLE DISPLAY
-      function tableFix(){
-        var $table = $('table'),
-            $bodyCells = $table.find('tbody tr:first').children(),
-            colWidth;
 
-        // Get the tbody columns width array
-        colWidth = $bodyCells.map(function() {
-            return $(this).width();
-        }).get();
-
-        // Set the width of thead columns
-        $table.find('thead tr').children().each(function(i, v) {
-            $(v).width(colWidth[i]);
-        });
-        console.log('I am table Fix')
-      }
-
-      function tableFix2(){
-        $(document).ready(function() {
-          $('table').DataTable({
-              "scrollY":        "200px",
-              "scrollCollapse": true,
-              "paging":         false
-          });
-        });
-      }
-      // tableFix2();
       //  POPULATE TABLE DATA
       $http
         .get('/events')
         .then(function(response){
           $scope.eventArr = response.data.results;
-          // tableFix();
         }, function(err){
           console.log(err)
         })
@@ -119,6 +97,10 @@
       })
     }
 
+    function programCtrl() {
+      console.log('program Controller')
+    }
+
     function govCtrl() {
       console.log('governance Controller')
     }
@@ -141,7 +123,7 @@
         $tempSlide[0].style.display = 'none';
         $indSlideContainer[slideIndex].style.display = 'block';
 
-      }, 15005);
+      }, 1505);
 
     }
 
@@ -163,7 +145,8 @@
           templateUrl: '../partials/mission.html'
         })
         .when('/programs', {
-          templateUrl: '../partials/programs.html'
+          templateUrl: '../partials/programs.html',
+          controller: 'programCtrl'
         })
         .when('/events', {
           templateUrl: '../partials/events.html',
@@ -174,7 +157,8 @@
           controller: 'contactCtrl'
         })
         .when('/donate', {
-          templateUrl: '../partials/donate.html'
+          templateUrl: '../partials/donate.html',
+          controller: 'donateCtrl'
         })
         .otherwise({
           rediretTo: '/'
