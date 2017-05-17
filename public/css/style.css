@@ -189,6 +189,7 @@ body {
                           -webkit-animation: slideLeftnFade 15s linear;  Safari, Chrome and Opera > 12.1
                           animation-name: slideLeftnFade 15s linear;
                           display: none;
+                          width: 100%;
                           height: 16em;
                         }
 
