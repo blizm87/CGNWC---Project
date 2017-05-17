@@ -107,8 +107,16 @@
 
     function indexCtrl(){
       let slideIndex = 0;
+      let $slideContainer = $('.slideContainer');
       let $indSlideContainer = $('.indSlideContainer');
       let $tempSlide = $('.tempSlide');
+
+      let imgArr = [
+        '../assets/scholarshipPics/pic5.png',
+        '../assets/scholarshipPics/pic4.png',
+        '../assets/scholarshipPics/pic1.png',
+        '../assets/mentoringPics/pic1.jpg'
+      ]
 
       setInterval(function(){
         for(var i = 0; i < $indSlideContainer.length; i++){
@@ -116,14 +124,19 @@
         }
 
         slideIndex++;
-        if(slideIndex >= $indSlideContainer.length) {
+        if(slideIndex == imgArr.length) {
           slideIndex = 0;
         }
 
+        $indSlideContainer[slideIndex].style.display = 'inline-block';
         $tempSlide[0].style.display = 'none';
-        $indSlideContainer[slideIndex].style.display = 'block';
 
-      }, 1505);
+        // $slideContainer.css({
+        //   'background-image': 'url(' + imgArr[slideIndex] + ')',
+        //   'background-size': 'cover'
+        // })
+
+      }, 15005);
 
     }
 

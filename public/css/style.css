@@ -164,8 +164,8 @@ body {
                 }
 
                     .slideContainer {
-                      width: 86%;
-                      height: 300px;
+                      width: 90%;
+                      height: 16em;
                       margin: 0 auto;
                       overflow: hidden;
                       border: 1px solid black;
@@ -186,27 +186,28 @@ body {
                         }
 
                         .indSlideContainer {
-/*                          -webkit-animation: slideInLeft 15s linear;  Safari, Chrome and Opera > 12.1
-                          animation-name: slideInLeft 15s linear;*/
+                          -webkit-animation: slideLeftnFade 15s linear;  Safari, Chrome and Opera > 12.1
+                          animation-name: slideLeftnFade 15s linear;
                           display: none;
-                          border: 1px solid orangered;
+                          height: 16em;
                         }
 
-/*                            @keyframes slideInLeft {
+                            @keyframes slideLeftnFade {
 
                                 0% {margin-left: 100%}
                                 15% {margin-left: 0}
                                 80% {margin-left: 0}
                                 80% {opacity: 1}
                                 100% {opacity: 0}
-                            }*/
+                            }
 
                             .imgContainer {
 
                             }
 
                                 .imgContent {
-                                  min-height: 300px;
+                                  width: 100%;
+                                  max-height: 16em;
                                 }
 
                 .aboutUs {
