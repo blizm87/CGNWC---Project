@@ -368,6 +368,7 @@ body {
                         }
 
                             .eventPlanner>table>thead {
+                              display: block;
                               text-align: center;
                             }
 
@@ -376,7 +377,9 @@ body {
                                 }
 
                             .eventPlanner>table>tbody {
-
+                              display: block;
+                              height: 280px;
+                              overflow: scroll;
                             }
 
                                 .eventDeleteBtn {

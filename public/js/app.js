@@ -10,6 +10,14 @@
     .controller('eventCtrl', ['$scope', '$http', eventCtrl])
     .controller('contactCtrl', ['$http', contactCtrl])
     .controller('donateCtrl', donateCtrl)
+    //  DIRECTIVE SENDS NOTICE THAT NGREPEAT HAS FINISHED EXECUTING
+    .directive('emitLastRepeaterElement', function(){
+      return function(scope) {
+        if (scope.$last){
+          scope.$emit('LastRepeaterElement');
+        }
+      };
+    })
 
     //  CONTROLLER FUNCTION HANDLER SECTION
 
@@ -22,6 +30,11 @@
     }
 
     function eventCtrl($scope, $http) {
+      //  FUNCTION EXECUTING AFTER NGREPEAT FINISHES RENDEREING
+      $scope.$on('LastRepeaterElement', function(){
+        console.log('good to go');
+        tHeadWidthFix();
+      });
 
       //  POPULATE TABLE DATA
       $http
@@ -95,6 +108,29 @@
             console.log(err)
           })
       })
+
+      // FIXES TABLE THEAD WIDTH ISSUE
+      function tHeadWidthFix(){
+        // Change the selector if needed
+        var $table = $('table'),
+            $bodyCells = $table.find('tbody tr:first').children(),
+            colWidth;
+
+        // Get the tbody columns width array
+        colWidth = $bodyCells.map(function() {
+            return $(this).width();
+        }).get();
+
+        // Set the width of thead columns
+        $table.find('thead tr').children().each(function(i, v) {
+          console.log(v)
+            // $(v).width(colWidth[i]);
+            $(v).css({
+              'min-width': colWidth[i] + 'px'
+            })
+        });
+      }
+
     }
 
     function programCtrl() {

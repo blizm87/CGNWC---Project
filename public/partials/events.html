@@ -13,7 +13,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr ng-repeat="event in eventArr">
+          <tr ng-repeat="event in eventArr" emit-last-repeater-element>
             <td>{{event.e_date}}</td>
             <td>{{event.e_time}}</td>
             <td>{{event.e_desc}}</td>
