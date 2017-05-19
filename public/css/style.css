@@ -368,8 +368,12 @@ body {
                         }
 
                             .eventPlanner>table>thead {
-                              display: block;
+                              display: inline-block;
                               text-align: center;
+                            }
+
+                            .eventPlanner>table>thead>tr {
+
                             }
 
                                 .eventPlanner>table>thead>tr>th {
@@ -377,7 +381,7 @@ body {
                                 }
 
                             .eventPlanner>table>tbody {
-                              display: block;
+                              display: inline-block;
                               height: 280px;
                               overflow: scroll;
                             }

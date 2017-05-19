@@ -112,21 +112,25 @@
       // FIXES TABLE THEAD WIDTH ISSUE
       function tHeadWidthFix(){
         // Change the selector if needed
-        var $table = $('table'),
-            $bodyCells = $table.find('tbody tr:first').children(),
-            colWidth;
+        var $table = $('table');
+        var $bodyCells = $table.find('tbody tr:last').children();
 
         // Get the tbody columns width array
-        colWidth = $bodyCells.map(function() {
-            return $(this).width();
+        var colWidth = $bodyCells.map(function() {
+            console.log($(this)[0])
+            console.log($(this).outerWidth())
+            console.log($(this)[0].offsetWidth)
+            return $(this).outerWidth();
         }).get();
 
         // Set the width of thead columns
         $table.find('thead tr').children().each(function(i, v) {
           console.log(v)
+          console.log('width equals: ' + colWidth[i])
             // $(v).width(colWidth[i]);
             $(v).css({
-              'min-width': colWidth[i] + 'px'
+              'width': colWidth[i] + 'px',
+              'border': '1px solid yellow'
             })
         });
       }
