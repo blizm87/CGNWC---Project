@@ -143,6 +143,7 @@
 
     function govCtrl() {
       console.log('governance Controller')
+
     }
 
     function indexCtrl(){
