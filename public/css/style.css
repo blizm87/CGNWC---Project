@@ -157,7 +157,9 @@ body {
               margin: 0 auto;
               width: 90%;
               border: 10px outset rgb(219,157,255);
-              background-color: lavender;
+              background: url('../assets/wallpapers/lavButterfly.jpg');
+              background-size: cover;
+              /*background-color: lavender;*/
               padding-bottom: 2em;
             }
 
@@ -172,8 +174,20 @@ body {
                       height: 16em;
                       margin: 0 auto;
                       overflow: hidden;
-                      border: 1px solid black;
+/*                      border: 1px solid black;
+*/                    }
+
+                    .ledContainer {
+                      margin-top: 1em;
+                      text-align: center;
                     }
+
+                        .ledInd {
+                          width: 10px;
+                          height: 10px;
+                          border: 1px solid black;
+                          display: inline-block;
+                        }
 
 /*                    @media screen and (max-width: 768px){
                         .slideContainer {
@@ -186,8 +200,19 @@ body {
                     }*/
 
                         .tempSlide {
+                          -webkit-animation: fadeOut 15s linear;  Safari, Chrome and Opera > 12.1
+                          animation-name: fadeOut 15s linear;
                           display: block;
                         }
+
+                            @keyframes fadeOut {
+
+                                0% {}
+                                15% {}
+                                80% {}
+                                80% {opacity: 1}
+                                100% {opacity: 0}
+                            }
 
                         .indSlideContainer {
                           -webkit-animation: slideLeftnFade 15s linear;  Safari, Chrome and Opera > 12.1
@@ -206,25 +231,26 @@ body {
                                 100% {opacity: 0}
                             }
 
-                                .imgContent {
-                                  width: 100%;
-                                  max-height: 16em;
-                                  image-rendering: auto;
-                                  image-rendering: crisp-edges;
-                                  image-rendering: pixelated;
-                                }
+                            .imgContent {
+                              width: 100%;
+                              max-height: 16em;
+                              image-rendering: auto;
+                              image-rendering: crisp-edges;
+                              image-rendering: pixelated;
+                            }
 
                 .aboutUs {
                   padding-left: 4em;
                   padding-right: 4em;
                   padding-bottom: 2em;
+                  font-weight: bold;
                 }
 
                 .historySec {
                   padding-left: 4em;
                   padding-right: 4em;
-/*                  background-color: violet;
-*/                  /*rgba(25,255, 105,1)*/
+                  font-weight: bold;
+                  font-size: 18px;
                 }
 
             .governanceContainer {
@@ -233,6 +259,7 @@ body {
 
                 .govSecContainer {
                   background: url('../assets/wallpapers/tanFlower.jpg');
+                  background-size: cover;
                   width: 90%;
                   border: 10px outset tan;
                   margin: 0 auto;

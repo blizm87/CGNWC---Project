@@ -150,10 +150,18 @@
       let slideIndex = 0;
       let $indSlideContainer = $('.indSlideContainer');
       let $tempSlide = $('.tempSlide');
-
+      let $led = $('.ledInd')
+      if($tempSlide.eq(0).css('display') == 'block'){
+        $led.eq(0).css({
+          'background-color': 'black'
+        })
+      }
       setInterval(function(){
         for(var i = 0; i < $indSlideContainer.length; i++){
           $indSlideContainer[i].style.display = 'none';
+          $led.eq(i).css({
+          'background-color': ''
+          })
         }
 
         slideIndex++;
@@ -162,6 +170,9 @@
         }
 
         $indSlideContainer[slideIndex].style.display = 'inline-block';
+        $led.eq(slideIndex).css({
+          'background-color': 'black'
+        })
         $tempSlide[0].style.display = 'none';
 
       }, 15005);
