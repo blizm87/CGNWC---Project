@@ -304,7 +304,14 @@ body {
                   margin: 0 auto;
                   background-color: black;
                   border: 10px outset orangered;
+                  padding-bottom: 2em;
                 }
+
+                    #mem2003 {
+                      width: 70%;
+                      text-align: center;
+                      margin: 0 auto;
+                    }
 
                 .missionStatCont>h1 {
                   width: 80%;
@@ -334,18 +341,17 @@ body {
 
                 .progSecContainer {
                   width: 90%;
-                  border-left: 1px solid black;
-                  border-right: 1px solid black;
-                  border-top: 1px solid black;
+                  background: url('../assets/wallpapers/silverFlowerPattern.jpeg');
+                  border: 10px outset silver;
                   margin: 0 auto;
+                  padding-bottom: 2em;
                 }
 
                     .progSecContainer>section {
-                      border-bottom: 1px solid black;
+
                     }
 
                         .mentoring {
-                          background-color: white;
                           text-align: center;
                           padding-bottom: 2em;
                         }
@@ -365,11 +371,11 @@ body {
                                     }
 
                         .scholarship {
-
+                          text-align: center;
                         }
 
                         .volunteer {
-                          padding-bottom: 1em;
+                          text-align: center;
                         }
 
             .eventsContainer {
@@ -512,8 +518,10 @@ body {
                 .contactUsContentContainer {
                   width: 90%;
                   margin: 0 auto;
-                  background-color: lightgrey;
-                  border: 10px outset white;
+                  background: url('../assets/wallpapers/curiousCat.jpg');
+                  background-position: center;
+                  background-size: cover;
+                  border: 10px inset white;
                   text-align: center;
                   padding-top: 1em;
                   padding-bottom: 2em;
@@ -522,14 +530,15 @@ body {
                     .contactUsContentContainer>h1 {
                       width: 80%;
                       margin: 0 auto;
-                      color: black;
-                      padding-bottom: .5em;
-                      border-bottom: 1px solid black;
                       font-family: 'Taviraj';
                     }
 
                     #indSectContainer {
-                      margin-top: 2em;
+                      margin-top: 1.5em;
+                      padding-top: 2em;
+                      padding-top: 2em;
+                      border-top: 1px solid black;
+                      border-bottom: 1px solid black;
                     }
 
                         #indSectContainer>section {
@@ -542,15 +551,33 @@ body {
                         }
 
                     .contOutlinedFormat {
-                      width: 50%;
-                      margin: 0 auto;
+                      width: 45%;
+                      font-family: 'Taviraj';
                     }
+
+                        .contOutlinedFormat>section {
+                          padding-bottom: .5em;
+                        }
+
+                        .contOutlinedFormat>section>h2 {
+
+                        }
 
                         .contOutlinedFormat>section>p {
                           font-family: 'Taviraj';
                           font-size: 18px;
                           font-weight: bold;
                         }
+
+                            #fbLink>img {
+                              margin: 0 auto;
+                              width: 50px;
+                            }
+
+                                #fbLink>img:hover {
+                                  opacity: .7;
+                                  transition-duration: 1s;
+                                }
 
             .donateContainer {
               width: 100%;
