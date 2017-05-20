@@ -4,6 +4,7 @@
   angular
     .module('cgnwcApp', ['ngRoute'])
     .config(routes)
+    .controller('mainCtrl', mainCtrl)
     .controller('indexCtrl', indexCtrl)
     .controller('govCtrl', govCtrl)
     .controller('programCtrl', programCtrl)
@@ -177,6 +178,21 @@
 
       }, 15005);
 
+    }
+
+    function mainCtrl(){
+      const $root = $('html, body');
+      $(document).on('click', '#navbar>div>li>a, #navbar>div>li>ul>li>a, #navbar>div>li>ul>li>ul>li>a', function(event){
+        event.preventDefault();
+        console.log('I am main controller')
+        console.log($( $.attr(this, 'href') ))
+
+        setTimeout(function(){
+          $root.animate({
+              scrollTop: $( $.attr(this, 'href') ).offset().top
+          }, 1000);
+        }, 2000)
+      });
     }
 
     //  ANGULAR ROUTE HANDLER SECTION

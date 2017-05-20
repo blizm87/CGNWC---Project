@@ -270,6 +270,7 @@ body {
                       margin:0 auto;
                       width: 80%;
                       text-align: center;
+                      padding-bottom: 2em;
                     }
 
                         .govSecContainer>section>h1 {
@@ -284,7 +285,13 @@ body {
 
                         }
 
+                            .duties>img {
+                              width: 600px;
+                              margin: 0 auto;
+                            }
+
                         .heiarchy {
+
                         }
 
                             .heiarchy>img {
