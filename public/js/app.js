@@ -4,7 +4,7 @@
   angular
     .module('cgnwcApp', ['ngRoute'])
     .config(routes)
-    .controller('mainCtrl', ['$scope', '$http', mainCtrl])
+    .controller('mainCtrl', ['$scope', '$http', '$timeout', mainCtrl])
     .controller('indexCtrl', indexCtrl)
     .controller('govCtrl', govCtrl)
     .controller('programCtrl', programCtrl)
@@ -180,20 +180,18 @@
 
     }
 
-    function mainCtrl($scope, $http){
+    function mainCtrl($scope, $http, $timeout){
       const $root = $('html, body');
       $(document).on('click', '#navbar>div>li>a, #navbar>div>li>ul>li>a, #navbar>div>li>ul>li>ul>li>a', function(event){
         event.preventDefault();
 
-        // console.log($(this))
-        // console.log($(this).attr('href'))
-        // console.log($('#HISTORY'))
-        // console.log($(this)[0].offsetTop)
-        setTimeout(function(){
+        let aClassName = $(this).attr('class').split(' ')[1];
+        $timeout(function(){
+          let tagTarget = $('#' + aClassName)
           $root.animate({
-              scrollTop: $(this)[0].offsetTop
+              scrollTop: tagTarget[0].offsetTop
           }, 1000);
-        }, 2000)
+        }, 1000)
       });
     }
 
