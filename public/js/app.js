@@ -185,9 +185,13 @@
       $(document).on('click', '#navbar>div>li>a, #navbar>div>li>ul>li>a, #navbar>div>li>ul>li>ul>li>a', function(event){
         event.preventDefault();
 
+        // console.log($(this))
+        // console.log($(this).attr('href'))
+        // console.log($('#HISTORY'))
+        // console.log($(this)[0].offsetTop)
         setTimeout(function(){
           $root.animate({
-              // scrollTop: $( $.attr(this, 'href') ).offset().top
+              scrollTop: $(this)[0].offsetTop
           }, 1000);
         }, 2000)
       });
