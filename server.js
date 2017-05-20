@@ -22,7 +22,7 @@ const adminRoutes = require('./src/routes/admin.js');
 
 app.use('/events', eventRoutes);
 app.use('/members', memberRoutes);
-app.use('/admin', adminRoutes)
+app.use('/admin', adminRoutes);
 
 const port = process.env.PORT || 3000;
 
