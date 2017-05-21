@@ -130,8 +130,8 @@
           console.log('width equals: ' + colWidth[i])
             // $(v).width(colWidth[i]);
             $(v).css({
-              'width': colWidth[i] + 'px',
-              'border': '1px solid yellow'
+              'width': colWidth[i] + 'px'
+              // 'border': '1px solid yellow'
             })
         });
       }
@@ -182,16 +182,23 @@
 
     function mainCtrl($scope, $http, $timeout){
       const $root = $('html, body');
-      $(document).on('click', '#navbar>div>li>a, #navbar>div>li>ul>li>a, #navbar>div>li>ul>li>ul>li>a', function(event){
+      $(document).on('click', '#navbar>div>li>a, #navbar>div>li>ul>li>a, #navbar>div>li>ul>li>ul>li>a, #upScroll>a' , function(event){
         event.preventDefault();
-
-        let aClassName = $(this).attr('class').split(' ')[1];
-        $timeout(function(){
-          let tagTarget = $('#' + aClassName)
-          $root.animate({
-              scrollTop: tagTarget[0].offsetTop
-          }, 1000);
-        }, 1000)
+        if($(this).attr('id') == 'upScrollTag'){
+          $timeout(function(){
+            $root.animate({
+                scrollTop: 0
+            }, 500);
+          }, 1000)
+        } else {
+            let aClassName = $(this).attr('class').split(' ')[1];
+            $timeout(function(){
+              let tagTarget = $('#' + aClassName)
+              $root.animate({
+                  scrollTop: tagTarget[0].offsetTop
+              }, 1000);
+            }, 500)
+        }
       });
     }
 
