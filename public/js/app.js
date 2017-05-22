@@ -24,16 +24,15 @@
 
     function donateCtrl(){
 
-    }
+    } //  END DONTATECTRL - CONTROLLER
 
     function contactCtrl($http){
 
-    }
+    } //  END CONTACTCTRL - CONTROLLER
 
     function eventCtrl($scope, $http) {
       //  FUNCTION EXECUTING AFTER NGREPEAT FINISHES RENDEREING
       $scope.$on('LastRepeaterElement', function(){
-        console.log('good to go');
         tHeadWidthFix();
       });
 
@@ -58,7 +57,6 @@
         $http
           .get('/events')
           .then(function(response){
-            console.log(response.data.results)
             $scope.eventArr = response.data.results;
           }, function(err){
             console.log(err)
@@ -72,15 +70,9 @@
       const $location = $('#createEventLocation')
       const $address = $('#createEventAddress')
       const $description = $('#createEventDescription')
-      let numTwo = 0
 
       $addEventBtn.on('click', function(){
-        numTwo++
-        if(numTwo%2 == true){
-          $eventCreateForm.slideDown();
-        } else {
-            $eventCreateForm.slideUp();
-        }
+          $eventCreateForm.slideToggle();
       })
 
       //  CREATES A NEW EVENT ENTRY IN DATABASE
@@ -118,16 +110,16 @@
 
         // Get the tbody columns width array
         var colWidth = $bodyCells.map(function() {
-            console.log($(this)[0])
-            console.log($(this).outerWidth())
-            console.log($(this)[0].offsetWidth)
+            // console.log($(this)[0])
+            // console.log($(this).outerWidth())
+            // console.log($(this)[0].offsetWidth)
             return $(this).outerWidth();
         }).get();
 
         // Set the width of thead columns
         $table.find('thead tr').children().each(function(i, v) {
-          console.log(v)
-          console.log('width equals: ' + colWidth[i])
+          // console.log(v)
+          // console.log('width equals: ' + colWidth[i])
             // $(v).width(colWidth[i]);
             $(v).css({
               'width': colWidth[i] + 'px'
@@ -136,16 +128,16 @@
         });
       }
 
-    }
+    }  // END EVENTCTRL - CONTROLLER
 
     function programCtrl() {
       console.log('program Controller')
-    }
+    } //  END PROGRAMCTRL - CONTROLLER
 
     function govCtrl() {
       console.log('governance Controller')
 
-    }
+    } //  END GOVCTRL - CONTROLLER
 
     function indexCtrl(){
       let slideIndex = 0;
@@ -178,47 +170,37 @@
 
       }, 15005);
 
-    }
+    } //  END INDEXCTRL - CONTROLLER
 
     function mainCtrl($scope, $http, $timeout){
-      //  NAVIGATION MOBILE DROPDOWN FEATURE
+      //  MOBILE MAINCONTENTBODY HEIGHT FIX
+      const $mainContainer = $('#mainContainer');
       const $headerCont = $('#headerContainer');
       const $mainBodyCont = $('#mainBodyContainer');
-      const $menuBtn = $('#menuBtn');
-      const $openMenuBtn = $('#openMenuBtn');
-      const $closeMenuBtn = $('#closeMenuBtn');
-      const $navbar = $('#navbar');
-      let numOne = 0;
       let headContHeightNum = $headerCont.outerHeight();
       let headContHeightString = headContHeightNum.toString();
-      console.log(headContHeightString)
 
-      $mainBodyCont.css({
-        'margin-top':
-      })
+      if($mainContainer.outerWidth() <= 768){
 
+        $mainBodyCont.css({
+          'margin-top': headContHeightString + 'px'
+        })
 
-      $menuBtn.on('click', function(){
-        numOne++
-        if(numOne%2 == true){
-          $openMenuBtn.css({
-            'display': 'none'
-          })
-          $closeMenuBtn.css({
-            'display': 'block'
-          })
-          $navbar.slideDown();
-        } else {
-            $openMenuBtn.css({
-              'display': 'block'
-            })
-            $closeMenuBtn.css({
-              'display': 'none'
-            })
-            $navbar.slideUp();
-        }
-      })
-
+        //  NAVIGATION MOBILE DROPDOWN FEATURE
+        $(document).on('click', '#menuBtn, #navbar>div>li>a, #navbar>div>li>ul>li>a, #navbar>div>li>ul>li>ul>li>a', function(event){
+          if(event.target.textContent == 'CGNWC'){
+            //  DO NOTHING
+          } else if(event.target.textContent == 'GOVERNANCE'){
+              //  DO NOTHING
+            } else if(event.target.textContent == 'PROGRAMS'){
+                //  DO NOTHING
+              } else {
+                  $('#navbar').slideToggle();
+                  $('#openMenuBtn').slideToggle();
+                  $('#closeMenuBtn').slideToggle();
+                }
+        });
+      }
 
       //  NAVIGATION SCROLLING FEATURE
       const $root = $('html, body');
@@ -230,17 +212,18 @@
                 scrollTop: 0
             }, 500);
           }, 1000)
-        } else {
-            let aClassName = $(this).attr('class').split(' ')[1];
-            $timeout(function(){
-              let tagTarget = $('#' + aClassName)
-              $root.animate({
-                  scrollTop: tagTarget[0].offsetTop
-              }, 1000);
-            }, 500)
-        }
+        } else if(event.target.textContent !== 'GOVERNANCE'){
+              let aClassName = $(this).attr('class').split(' ')[1];
+              $timeout(function(){
+                let tagTarget = $('#' + aClassName)
+                $root.animate({
+                    scrollTop: tagTarget[0].offsetTop
+                }, 1000);
+              }, 500)
+          }
       });
-    }
+
+    } //  END MAINCTRL -  CONTROLLER
 
     //  ANGULAR ROUTE HANDLER SECTION
     function routes($routeProvider){
