@@ -36,6 +36,7 @@ body {
           width: 2em;
           height: 2em;
           display: none;
+          text-align: center;
         }
 
             #menuBtn:active {
@@ -62,11 +63,10 @@ body {
 
             #closeMenuBtn {
               display: none;
-              text-align: center;
               position: relative;
               width: 2em;
               height: 2em;
-              opacity: .6;
+              opacity: .8;
             }
                 .close:active {
                   background-color: rgb(24,128,33);
@@ -207,17 +207,45 @@ body {
 
         @media screen and (max-width: 768px) {
 
-            #menuBtn {
-              display: inline-block;
+            #headerContainer {
+              position: fixed;
             }
 
-            #mobileDonateBtn {
-              display: block;
-            }
+                #menuBtn {
+                  display: inline-block;
+                }
 
-            #navbar>div {
-              display: block;
-            }
+                #mobileDonateBtn {
+                  display: block;
+                }
+
+                #navbar {
+                  margin-top: 5px;
+                  display: none;
+                }
+
+                    #navbar>div {
+                      display: block;
+                      font-family: 'Fjalla One';
+                      border-top: 2px solid orangered;
+                    }
+
+                        #navbar>div>li {
+                          width: 100%;
+                          padding-left: 0;
+                          padding-right: 0;
+                        }
+
+/*            #mainBodyContainer {
+              margin-top: 100px;
+            }*/
+/*
+                #mainContent {
+                    border-left: 25px solid transparent;
+                    border-right: 25px solid transparent;
+                    border-top: 25px solid transparent;
+                    border-bottom: 25px solid transparent;
+                }*/
 
         }
 
@@ -235,7 +263,6 @@ body {
           padding-top: 1em;
           padding-left: 1em;
           padding-right: 1em;
-          background-color: rgba(25,255, 105, .4);
           border-left: 25px solid rgb(0,178,128);
           border-right: 25px solid rgb(0,178,128);
           border-top: 25px solid rgb(32,255,128);

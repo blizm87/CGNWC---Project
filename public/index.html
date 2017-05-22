@@ -16,84 +16,84 @@
 <body ng-controller="mainCtrl">
 
   <div class='pure-g' id='mainContainer'>
+    <div id='headerContainer'>
+      <header class='pure-g pure-u-1' id='headerLogo'>
+        <img class='pure-img' id="mainLogo" src='./assets/orgLogos/logo1.png'>
+      </header>
 
-    <header class='pure-g pure-u-1' id='headerLogo'>
-      <img class='pure-img' id="mainLogo" src='./assets/orgLogos/logo1.png'>
-    </header>
+      <div class='pure-g pure-u-1 pure-menu-horizontal pure-menu' id='navContainer'>
 
-    <div class='pure-g pure-u-1 pure-menu-horizontal pure-menu' id='navContainer'>
-
-      <div id='menuBtn'>
-        <div id='openMenuBtn'>
-          <div></div>
-          <div></div>
-          <div></div>
+        <div id='menuBtn'>
+          <div id='openMenuBtn'>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class='close' id='closeMenuBtn'></div>
         </div>
-        <div class='close' id='closeMenuBtn'></div>
+
+
+        <ul class='pure-menu-list' id='mobileDonateBtn'>
+          <li class='pure-menu-item'><a href='#!/donate' class='pure-menu-link'>DONATE NOW</a></li>
+        </ul>
+
+        <ul class='pure-menu-list myNav' id='navbar'>
+
+            <div>
+              <li class='pure-menu-item pure-menu-has-children pure-menu-allow-hover'>
+                <a href='/#!/' class='pure-menu-link'>CGNWC</a>
+                <ul class='pure-menu-children' id='homeSubMenu'>
+                  <li class='pure-menu-item'><a href='#!/' class='pure-menu-link ABOUT'>ABOUT US</a></li>
+                  <li class='pure-menu-item'><a href='#!/' class='pure-menu-link HISTORY'>HISTORY</a></li>
+                  <li class='pure-menu-item pure-menu-has-children pure-menu-allow-hover'>
+                    <a href='#!/governance' class='pure-menu-link'>GOVERNANCE</a>
+                    <ul class='pure-menu-children' id='govSubMenu'>
+                      <li class='pure-menu-item'><a href='#!/governance' class='pure-menu-link BYLAWS'>BYLAWS</a></li>
+                      <li class='pure-menu-item'><a href='#!/governance' class='pure-menu-link DUTIES'>DUTIES</a></li>
+                      <li class='pure-menu-item'><a href='#!/governance' class='pure-menu-link HIERARCHY'>HIERARCHY</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </div>
+
+            <div>
+              <li class='pure-menu-item'>
+                <a href='/#!/mission' class='pure-menu-link'>MISSION</a>
+              </li>
+            </div>
+
+            <div>
+              <li class='pure-menu-item pure-menu-has-children pure-menu-allow-hover'>
+                <a href='/#!/programs' class='pure-menu-link'>PROGRAMS</a>
+                <ul class='pure-menu-children' id='homeSubMenu'>
+                  <li class='pure-menu-item'><a href='#!/programs' class='pure-menu-link MENTOR'>MENTOR</a></li>
+                  <li class='pure-menu-item'><a href='#!/programs' class='pure-menu-link SCHOLARSHIP'>SCHOLARSHIP</a></li>
+                  <li class='pure-menu-item'><a href='#!/programs' class='pure-menu-link VOLUNTEER'>VOLUNTEER</a></li>
+                </ul>
+              </li>
+            </div>
+
+            <div>
+              <li class='pure-menu-item'>
+                <a href='/#!/events' class='pure-menu-link'>EVENTS</a>
+              </li>
+            </div>
+
+            <div>
+              <li class='pure-menu-item'>
+                <a href='/#!/contactUs' class='pure-menu-link'>CONTACT US</a>
+              </li>
+            </div>
+
+            <div>
+              <li class='pure-menu-item'>
+                <a href='/#!/donate' class='pure-menu-link'>DONATE</a>
+              </li>
+            </div>
+        </ul>
       </div>
-
-
-      <ul class='pure-menu-list' id='mobileDonateBtn'>
-        <li class='pure-menu-item'><a href='#!/donate' class='pure-menu-link'>DONATE NOW</a></li>
-      </ul>
-
-      <ul class='pure-menu-list myNav' id='navbar'>
-
-          <div>
-            <li class='pure-menu-item pure-menu-has-children pure-menu-allow-hover'>
-              <a href='/#!/' class='pure-menu-link'>CGNWC</a>
-              <ul class='pure-menu-children' id='homeSubMenu'>
-                <li class='pure-menu-item'><a href='#!/' class='pure-menu-link ABOUT'>ABOUT US</a></li>
-                <li class='pure-menu-item'><a href='#!/' class='pure-menu-link HISTORY'>HISTORY</a></li>
-                <li class='pure-menu-item pure-menu-has-children pure-menu-allow-hover'>
-                  <a href='#!/governance' class='pure-menu-link'>GOVERNANCE</a>
-                  <ul class='pure-menu-children' id='govSubMenu'>
-                    <li class='pure-menu-item'><a href='#!/governance' class='pure-menu-link BYLAWS'>BYLAWS</a></li>
-                    <li class='pure-menu-item'><a href='#!/governance' class='pure-menu-link DUTIES'>DUTIES</a></li>
-                    <li class='pure-menu-item'><a href='#!/governance' class='pure-menu-link HIERARCHY'>HIERARCHY</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-          </div>
-
-          <div>
-            <li class='pure-menu-item'>
-              <a href='/#!/mission' class='pure-menu-link'>MISSION</a>
-            </li>
-          </div>
-
-          <div>
-            <li class='pure-menu-item pure-menu-has-children pure-menu-allow-hover'>
-              <a href='/#!/programs' class='pure-menu-link'>PROGRAMS</a>
-              <ul class='pure-menu-children' id='homeSubMenu'>
-                <li class='pure-menu-item'><a href='#!/programs' class='pure-menu-link MENTOR'>MENTOR</a></li>
-                <li class='pure-menu-item'><a href='#!/programs' class='pure-menu-link SCHOLARSHIP'>SCHOLARSHIP</a></li>
-                <li class='pure-menu-item'><a href='#!/programs' class='pure-menu-link VOLUNTEER'>VOLUNTEER</a></li>
-              </ul>
-            </li>
-          </div>
-
-          <div>
-            <li class='pure-menu-item'>
-              <a href='/#!/events' class='pure-menu-link'>EVENTS</a>
-            </li>
-          </div>
-
-          <div>
-            <li class='pure-menu-item'>
-              <a href='/#!/contactUs' class='pure-menu-link'>CONTACT US</a>
-            </li>
-          </div>
-
-          <div>
-            <li class='pure-menu-item'>
-              <a href='/#!/donate' class='pure-menu-link'>DONATE</a>
-            </li>
-          </div>
-      </ul>
     </div>
-
 
     <div class='pure-g pure-u-1' id='mainBodyContainer'>
       <div id='upScroll'>

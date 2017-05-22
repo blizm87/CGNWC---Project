@@ -72,11 +72,11 @@
       const $location = $('#createEventLocation')
       const $address = $('#createEventAddress')
       const $description = $('#createEventDescription')
-      let num = 0
+      let numTwo = 0
 
       $addEventBtn.on('click', function(){
-        num++
-        if(num%2 == true){
+        numTwo++
+        if(numTwo%2 == true){
           $eventCreateForm.slideDown();
         } else {
             $eventCreateForm.slideUp();
@@ -181,8 +181,48 @@
     }
 
     function mainCtrl($scope, $http, $timeout){
+      //  NAVIGATION MOBILE DROPDOWN FEATURE
+      const $headerCont = $('#headerContainer');
+      const $mainBodyCont = $('#mainBodyContainer');
+      const $menuBtn = $('#menuBtn');
+      const $openMenuBtn = $('#openMenuBtn');
+      const $closeMenuBtn = $('#closeMenuBtn');
+      const $navbar = $('#navbar');
+      let numOne = 0;
+      let headContHeightNum = $headerCont.outerHeight();
+      let headContHeightString = headContHeightNum.toString();
+      console.log(headContHeightString)
+
+      $mainBodyCont.css({
+        'margin-top':
+      })
+
+
+      $menuBtn.on('click', function(){
+        numOne++
+        if(numOne%2 == true){
+          $openMenuBtn.css({
+            'display': 'none'
+          })
+          $closeMenuBtn.css({
+            'display': 'block'
+          })
+          $navbar.slideDown();
+        } else {
+            $openMenuBtn.css({
+              'display': 'block'
+            })
+            $closeMenuBtn.css({
+              'display': 'none'
+            })
+            $navbar.slideUp();
+        }
+      })
+
+
+      //  NAVIGATION SCROLLING FEATURE
       const $root = $('html, body');
-      $(document).on('click', '#navbar>div>li>a, #navbar>div>li>ul>li>a, #navbar>div>li>ul>li>ul>li>a, #upScroll>a' , function(event){
+      $(document).on('click', '#navbar>div>li>ul>li>a, #navbar>div>li>ul>li>ul>li>a, #upScroll>a' , function(event){
         event.preventDefault();
         if($(this).attr('id') == 'upScrollTag'){
           $timeout(function(){
