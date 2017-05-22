@@ -24,7 +24,7 @@ body {
 
     #navContainer {
       width: 100%;
-      height: 56.5px;
+      min-height: 56.5px;
       background-color: rgb(244,115,33);
       border-top: 5px solid orangered;
       border-bottom: 5px solid orangered;
@@ -35,9 +35,7 @@ body {
           margin-left: 1em;
           width: 2em;
           height: 2em;
-/*          border: 1px solid white;
-          border-radius: 10%;*/
-          display: inline-block;
+          display: none;
         }
 
             #menuBtn:active {
@@ -45,7 +43,6 @@ body {
             }
 
             #openMenuBtn {
-              /*display: none;*/
               width: 60%;
               height: 60%;
               margin-top: 9px;
@@ -90,6 +87,7 @@ body {
                 }
 
         #mobileDonateBtn {
+          display: none;
           vertical-align: top;
           margin-top: 4px;
           margin-right: 1em;
@@ -114,7 +112,7 @@ body {
                     }
 
         #navbar {
-          display: none;
+          display: block;
           width: 100%;
           text-align: center;
         }
@@ -208,6 +206,14 @@ body {
                                 }
 
         @media screen and (max-width: 768px) {
+
+            #menuBtn {
+              display: inline-block;
+            }
+
+            #mobileDonateBtn {
+              display: block;
+            }
 
             #navbar>div {
               display: block;
