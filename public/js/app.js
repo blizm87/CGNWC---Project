@@ -213,13 +213,25 @@
             }, 500);
           }, 1000)
         } else if(event.target.textContent !== 'GOVERNANCE'){
+
+            if($mainContainer.outerWidth() <= 768){
               let aClassName = $(this).attr('class').split(' ')[1];
               $timeout(function(){
                 let tagTarget = $('#' + aClassName)
                 $root.animate({
-                    scrollTop: tagTarget[0].offsetTop
+                    scrollTop: tagTarget[0].offsetTop - headContHeightNum
                 }, 1000);
               }, 500)
+            } else {
+                let aClassName = $(this).attr('class').split(' ')[1];
+                $timeout(function(){
+                  let tagTarget = $('#' + aClassName)
+                  $root.animate({
+                      scrollTop: tagTarget[0].offsetTop
+                  }, 1000);
+                }, 500)
+              }
+
           }
       });
 

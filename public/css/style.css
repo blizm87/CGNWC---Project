@@ -280,6 +280,11 @@ body {
                   padding-bottom: 1em;
                 }
 
+                    .topSec>h1 {
+                      text-align: center;
+                      font-family: 'Fjalla+One';
+                    }
+
                     .slideContainer {
                       width: 90%;
                       height: 16em;
@@ -338,14 +343,17 @@ body {
                   padding-left: 4em;
                   padding-right: 4em;
                   padding-bottom: 2em;
+                  font-family: 'Taviraj';
                   font-weight: bold;
+                  font-size: 20px;
                 }
 
                 .historySec {
                   padding-left: 4em;
                   padding-right: 4em;
                   font-weight: bold;
-                  font-size: 18px;
+                  font-family: 'Taviraj';
+                  font-size: 20px;
                 }
 
             .governanceContainer {
