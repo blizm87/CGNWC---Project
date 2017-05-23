@@ -287,8 +287,8 @@ body {
 
                     .slideContainer {
                       width: 90%;
-/*                      height: 16em;
-*/                      margin: 0 auto;
+                      height: 16em;
+                      margin: 0 auto;
                       overflow: hidden;
                       border: 1px solid black;
                     }
