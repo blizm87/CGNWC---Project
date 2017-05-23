@@ -58,4 +58,19 @@
             style="border: 0" width="800" height="600" frameborder="0" scrolling="no" id='calendar'>
     </iframe>
   </div>
+
+  <div class='eventsContentMobile'>
+    <h1>Events</h1>
+    <section ng-repeat="event in eventArr" emit-last-repeater-element>
+      <ul>
+          <li>
+            <p>Date: {{event.e_date}}</p>
+            <p>Time: {{event.e_time}}</p>
+            <p>Location: {{event.e_loc}}</p>
+            <p>Address: {{event.e_add}}</p>
+            <p>Description:<br><br>{{event.e_desc}}</p>
+          </li>
+      </ul>
+    <section>
+  </div>
 </div>

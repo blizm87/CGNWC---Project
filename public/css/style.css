@@ -290,15 +290,7 @@ body {
                       height: 16em;
                       margin: 0 auto;
                       overflow: hidden;
-                      border: 1px solid black;
                     }
-
-                        @media screen and (max-width: 768px) {
-                          .slideContainer {
-
-                          }
-                        }
-
 
                     .ledContainer {
                       margin-top: 1em;
@@ -411,7 +403,6 @@ body {
                               border: 1px solid black;
                             }
 
-
             .missionContainer {
               width: 100%;
               height: 100%;
@@ -509,6 +500,31 @@ body {
                   border: 10px outset lightblue;
                   padding-bottom: 2em;
                 }
+
+                .eventsContentMobile {
+                  margin: 0 auto;
+                  width: 90%;
+                  background-color: skyblue;
+                  border: 10px outset lightblue;
+                  padding-bottom: 2em;
+                  display: none;
+                }
+
+                    .eventsContentMobile>h1 {
+                      text-align: center;
+                    }
+
+                    .eventsContentMobile>section {
+                      padding-top: 5px;
+                      padding-bottom: 5px;
+                      padding-right: 10px;
+                    }
+
+                        .eventsContentMobile>ul {
+                          margin-left: 0;
+                          text-align: left;
+                          border: 1px solid black;
+                        }
 
                     .eventsContent>h1 {
                       margin-top: 0;
@@ -654,7 +670,6 @@ body {
                     #indSectContainer {
                       margin-top: 1.5em;
                       padding-top: 2em;
-                      padding-top: 2em;
                       border-top: 1px solid black;
                       border-bottom: 1px solid black;
                     }
@@ -784,6 +799,66 @@ body {
 
 
         @media screen and (max-width: 768px) {
+
+          .slideContainer {
+            height: 5em;
+          }
+
+          .aboutUs {
+            padding-left: 5px;
+            padding-right: 5px;
+            padding-bottom: 0;
+            font-size: 18px;
+            text-align: center;
+          }
+
+          .historySec {
+            padding-left: 5px;
+            padding-right: 5px;
+            padding-bottom: 0;
+            font-size: 18px;
+            text-align: center;
+          }
+
+          .missionStatement {
+            margin-left: 5px;
+            margin-right: 5px;
+            padding-bottom: 0;
+            font-size: 18px;
+            text-align: center;
+          }
+
+          .eventsContent {
+            display: none;
+          }
+
+          .eventsContentMobile {
+            display: block;
+          }
+
+          #indSectContainer>section {
+            padding-bottom: 25px;
+          }
+
+          #indSectContainer>section>h2 {
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+
+          .contactUsContentContainer {
+            background: white;
+          }
+
+          .contOutlinedFormat {
+            width: 100%;
+            text-align: center;
+          }
+
+              .contOutlinedFormat>section {
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+              }
 
           #upScroll {
             right: 0;

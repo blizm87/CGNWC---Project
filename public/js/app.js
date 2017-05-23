@@ -34,6 +34,15 @@
       //  FUNCTION EXECUTING AFTER NGREPEAT FINISHES RENDEREING
       $scope.$on('LastRepeaterElement', function(){
         tHeadWidthFix();
+        //  EVENTCONTENTMOBILE SECTION DECORATOR
+        let $mobileSec = $('.eventsContentMobile>section');
+        for(var i = 0; i < $mobileSec.length; i++){
+          if(i%2 !== 0 ) {
+            $mobileSec.eq(i).css({
+              'background-color': 'rgba(54, 139, 193,.5)'
+            })
+          }
+        }
       });
 
       //  POPULATE TABLE DATA
