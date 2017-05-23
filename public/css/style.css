@@ -287,10 +287,18 @@ body {
 
                     .slideContainer {
                       width: 90%;
-                      height: 16em;
-                      margin: 0 auto;
+/*                      height: 16em;
+*/                      margin: 0 auto;
                       overflow: hidden;
+                      border: 1px solid black;
                     }
+
+                        @media screen and (max-width: 768px) {
+                          .slideContainer {
+
+                          }
+                        }
+
 
                     .ledContainer {
                       margin-top: 1em;
@@ -777,6 +785,9 @@ body {
 
         @media screen and (max-width: 768px) {
 
-
+          #upScroll {
+            right: 0;
+            margin-right: 5px;
+          }
 
         }
