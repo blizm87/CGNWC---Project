@@ -196,8 +196,8 @@
         })
 
         $('#upScroll').css({
-          'top': '350px',
-          'position': 'fixed'
+          'top': '350px'
+          // 'position': 'fixed'
         })
 
         //  NAVIGATION DROPDOWN FEATURE FOR MOBILE
@@ -218,12 +218,12 @@
         });
 
         //  NAVIGATION SCROLLING FEATURE FOR MOBILE
-        const $root = $('html, body');
+        const $root = $('body');
         $(document).on('touchstart', '#navbar>div>li>ul>li>a, #navbar>div>li>ul>li>ul>li>a, #upScroll' , function(event){
           // event.preventDefault();
           if($(this).attr('id') == 'upScroll'){
             $timeout(function(){
-              $('body').animate({
+              $root.animate({
                   scrollTop: 0
               }, 1000);
             }, 500)
@@ -232,7 +232,7 @@
                 let aClassName = $(this).attr('class').split(' ')[1];
                 $timeout(function(){
                   let tagTarget = $('#' + aClassName)
-                  $('body').animate({
+                  $root.animate({
                       scrollTop: tagTarget[0].offsetTop - headContHeightNum
                   }, 1000);
                 }, 500)
