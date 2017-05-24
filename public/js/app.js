@@ -223,8 +223,8 @@
           // event.preventDefault();
           if($(this).attr('id') == 'upScroll'){
             $timeout(function(){
-              $root.animate({
-                  scrollTop: 0
+              $window.animate({
+                  scrollTo: 0
               }, 1000);
             }, 500)
           } else if(event.target.textContent !== 'GOVERNANCE'){
@@ -232,8 +232,8 @@
                 let aClassName = $(this).attr('class').split(' ')[1];
                 $timeout(function(){
                   let tagTarget = $('#' + aClassName)
-                  $root.animate({
-                      scrollTop: tagTarget[0].offsetTop - headContHeightNum
+                  $window.animate({
+                      scrollTo: tagTarget[0].offsetTop  // - headContHeightNum
                   }, 1000);
                 }, 500)
             }
