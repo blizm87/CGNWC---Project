@@ -195,8 +195,10 @@
           'margin-top': headContHeightString + 'px'
         })
 
+console.log('I AM THE DROP DOWN FEATURE')
         //  NAVIGATION MOBILE DROPDOWN FEATURE
-        $(document).on('click', '#openMenuBtn, #closeMenuBtn, #navbar>div>li>a, #navbar>div>li>ul>li>a, #navbar>div>li>ul>li>ul>li>a', function(event){
+        $(document).on('click touchstart', '#openMenuBtn, #closeMenuBtn, #navbar>div>li>a, #navbar>div>li>ul>li>a, #navbar>div>li>ul>li>ul>li>a', function(event){
+          console.log('I AM INSIDE THE DROPDOWN FEATURE')
           if(event.target.textContent == 'CGNWC'){
             //  DO NOTHING
           } else if(event.target.textContent == 'GOVERNANCE'){
@@ -210,10 +212,11 @@
                 }
         });
       }
-
+console.log('I AM THE SCROLLING FEATURE')
       //  NAVIGATION SCROLLING FEATURE
       const $root = $('html, body');
-      $(document).on('click', '#navbar>div>li>ul>li>a, #navbar>div>li>ul>li>ul>li>a, #upScroll>a' , function(event){
+      $(document).on('click touchstart', '#navbar>div>li>ul>li>a, #navbar>div>li>ul>li>ul>li>a, #upScroll>a' , function(event){
+        console.log('I AM INSIDE THE SCROLLING FEATURE')
         event.preventDefault();
         if($(this).attr('id') == 'upScrollTag'){
           $timeout(function(){
