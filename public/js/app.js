@@ -208,7 +208,7 @@
                     $('#navbar').slideToggle();
                     $('#openMenuBtn').slideToggle();
                     $('#closeMenuBtn').slideToggle();
-                  }, 1000)
+                  }, 500)
                 }
         });
 

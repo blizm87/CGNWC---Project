@@ -800,10 +800,6 @@ body {
 
         @media screen and (max-width: 768px) {
 
-          #mainContent {
-            width: 75%;
-          }
-
           .slideContainer {
             height: 5em;
           }
@@ -865,14 +861,14 @@ body {
               }
 
           #upScroll {
-            top: 400px;
-            right: 0;
+/*            top: 400px;
+*/            right: 0;
             margin-right: 0;
-            position: fixed;
-          }
+/*            position: fixed;
+*/          }
 
-          #footer {
+/*          #footer {
             width: 100%;
-          }
+          }*/
 
         }
