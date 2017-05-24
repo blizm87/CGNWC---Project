@@ -4,7 +4,7 @@
   angular
     .module('cgnwcApp', ['ngRoute'])
     .config(routes)
-    .controller('mainCtrl', ['$scope', '$http', '$timeout', mainCtrl])
+    .controller('mainCtrl', ['$scope', '$http', '$timeout', '$window', mainCtrl])
     .controller('indexCtrl', indexCtrl)
     .controller('govCtrl', govCtrl)
     .controller('programCtrl', programCtrl)
@@ -181,7 +181,7 @@
 
     } //  END INDEXCTRL - CONTROLLER
 
-    function mainCtrl($scope, $http, $timeout){
+    function mainCtrl($scope, $http, $timeout, $window){
       //  MOBILE MAINCONTENTBODY HEIGHT FIX
       const $mainContainer = $('#mainContainer');
       const $headerCont = $('#headerContainer');
@@ -191,9 +191,9 @@
 
       if($mainContainer.outerWidth() <= 768){
 
-        $mainBodyCont.css({
-          'margin-top': headContHeightString + 'px'
-        })
+        // $mainBodyCont.css({
+        //   'margin-top': headContHeightString + 'px'
+        // })
 
         $('#upScroll').css({
           'top': '350px'
@@ -223,18 +223,20 @@
           // event.preventDefault();
           if($(this).attr('id') == 'upScroll'){
             $timeout(function(){
-              $window.animate({
-                  scrollTo: 0
-              }, 1000);
+              // $root.animate({
+              //     scrollTop: 0
+              // }, 1000);
+              $window.scrollTo(0)
             }, 500)
           } else if(event.target.textContent !== 'GOVERNANCE'){
 
                 let aClassName = $(this).attr('class').split(' ')[1];
                 $timeout(function(){
                   let tagTarget = $('#' + aClassName)
-                  $window.animate({
-                      scrollTo: tagTarget[0].offsetTop  // - headContHeightNum
-                  }, 1000);
+                  // $root.animate({
+                  //     scrollTop: tagTarget[0].offsetTop  // - headContHeightNum
+                  // }, 1000);
+                  $window.scrollTo(0)
                 }, 500)
             }
         });
