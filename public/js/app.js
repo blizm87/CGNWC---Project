@@ -213,7 +213,7 @@
         //  NAVIGATION SCROLLING FEATURE FOR MOBILE
         const $root = $('html, body');
         $(document).on('touchstart', '#navbar>div>li>ul>li>a, #navbar>div>li>ul>li>ul>li>a, #upScroll>a' , function(event){
-          event.preventDefault();
+          // event.preventDefault();
           if($(this).attr('id') == 'upScrollTag'){
             $timeout(function(){
               $root.animate({
