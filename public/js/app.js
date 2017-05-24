@@ -204,9 +204,11 @@
             } else if(event.target.textContent == 'PROGRAMS'){
                 //  DO NOTHING
               } else {
-                  $('#navbar').slideToggle();
-                  $('#openMenuBtn').slideToggle();
-                  $('#closeMenuBtn').slideToggle();
+                  $timeout(function(){
+                    $('#navbar').slideToggle();
+                    $('#openMenuBtn').slideToggle();
+                    $('#closeMenuBtn').slideToggle();
+                  }, 1000)
                 }
         });
 

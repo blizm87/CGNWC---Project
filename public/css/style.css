@@ -801,7 +801,7 @@ body {
         @media screen and (max-width: 768px) {
 
           #mainContent {
-            width: 80%;
+            width: 75%;
           }
 
           .slideContainer {
@@ -868,6 +868,7 @@ body {
             top: 400px;
             right: 0;
             margin-right: 0;
+            position: fixed;
           }
 
           #footer {
