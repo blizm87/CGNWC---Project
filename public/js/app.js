@@ -224,8 +224,8 @@
           if($(this).attr('id') == 'upScroll'){
             $timeout(function(){
               $root.animate({
-                  scrollTop: 1
-              }, 2000);
+                  scrollTop: 0
+              }, 500);
             }, 1000)
           } else if(event.target.textContent !== 'GOVERNANCE'){
 
@@ -234,7 +234,7 @@
                   let tagTarget = $('#' + aClassName)
                   $root.animate({
                       scrollTop: tagTarget[0].offsetTop - headContHeightNum
-                  }, 2000);
+                  }, 1000);
                 }, 500)
             }
         });
