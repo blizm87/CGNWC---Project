@@ -801,7 +801,7 @@ body {
         @media screen and (max-width: 768px) {
 
           #mainContent {
-            padding: 1px;
+            padding: 10px;
           }
 
           .slideContainer {
