@@ -219,9 +219,9 @@
 
         //  NAVIGATION SCROLLING FEATURE FOR MOBILE
         const $root = $('html, body');
-        $(document).on('touchstart', '#navbar>div>li>ul>li>a, #navbar>div>li>ul>li>ul>li>a, #upScroll>a' , function(event){
+        $(document).on('touchstart', '#navbar>div>li>ul>li>a, #navbar>div>li>ul>li>ul>li>a, #upScroll' , function(event){
           // event.preventDefault();
-          if($(this).attr('id') == 'upScrollTag'){
+          if($(this).attr('id') == 'upScroll'){
             $timeout(function(){
               $root.animate({
                   scrollTop: 0
