@@ -196,7 +196,7 @@
         })
 
         //  NAVIGATION MOBILE DROPDOWN FEATURE
-        $(document).on('click', '#menuBtn, #navbar>div>li>a, #navbar>div>li>ul>li>a, #navbar>div>li>ul>li>ul>li>a', function(event){
+        $(document).on('click', '#openMenuBtn, #closeMenuBtn, #navbar>div>li>a, #navbar>div>li>ul>li>a, #navbar>div>li>ul>li>ul>li>a', function(event){
           if(event.target.textContent == 'CGNWC'){
             //  DO NOTHING
           } else if(event.target.textContent == 'GOVERNANCE'){
