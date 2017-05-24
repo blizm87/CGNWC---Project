@@ -195,6 +195,11 @@
           'margin-top': headContHeightString + 'px'
         })
 
+        $('#upScroll').css({
+          'top': '350px',
+          'position': 'fixed'
+        })
+
         //  NAVIGATION DROPDOWN FEATURE FOR MOBILE
         $(document).on('touchstart', '#menuBtn, #navbar>div>li>a, #navbar>div>li>ul>li>a, #navbar>div>li>ul>li>ul>li>a', function(event){
           if(event.target.textContent == 'CGNWC'){
@@ -229,7 +234,7 @@
                   let tagTarget = $('#' + aClassName)
                   $root.animate({
                       scrollTop: tagTarget[0].offsetTop - headContHeightNum
-                  }, 1000);
+                  }, 2000);
                 }, 500)
             }
         });
