@@ -871,4 +871,8 @@ body {
             margin-right: 0;
           }
 
+          #footer {
+            margin-top: 1px;
+          }
+
         }
