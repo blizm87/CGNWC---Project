@@ -208,8 +208,8 @@ body {
         @media screen and (max-width: 768px) {
 
             #headerContainer {
-/*              position: fixed;
-*/              z-index: 1;
+              position: fixed;
+              z-index: 1;
             }
 
                 #menuBtn {

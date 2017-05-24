@@ -191,13 +191,12 @@
 
       if($mainContainer.outerWidth() <= 768){
 
-        // $mainBodyCont.css({
-        //   'margin-top': headContHeightString + 'px'
-        // })
+        $mainBodyCont.css({
+          'margin-top': headContHeightString + 'px'
+        })
 
         $('#upScroll').css({
           'top': '350px'
-          // 'position': 'fixed'
         })
 
         //  NAVIGATION DROPDOWN FEATURE FOR MOBILE
@@ -226,7 +225,7 @@
               // $root.animate({
               //     scrollTop: 0
               // }, 1000);
-              $window.scrollTo(0)
+              // $window.scrollTo(0, 0)
             }, 500)
           } else if(event.target.textContent !== 'GOVERNANCE'){
 
@@ -236,7 +235,7 @@
                   // $root.animate({
                   //     scrollTop: tagTarget[0].offsetTop  // - headContHeightNum
                   // }, 1000);
-                  $window.scrollTo(0)
+                  // $window.scrollTo(tagTarget[0].offsetTop, 0)
                 }, 500)
             }
         });
