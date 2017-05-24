@@ -195,8 +195,8 @@
           'margin-top': headContHeightString + 'px'
         })
 
-        //  NAVIGATION MOBILE DROPDOWN FEATURE
-        $(document).on('click touchstart', '#menuBtn, #navbar>div>li>a, #navbar>div>li>ul>li>a, #navbar>div>li>ul>li>ul>li>a', function(event){
+        //  NAVIGATION DROPDOWN FEATURE FOR MOBILE
+        $(document).on('touchstart', '#menuBtn, #navbar>div>li>a, #navbar>div>li>ul>li>a, #navbar>div>li>ul>li>ul>li>a', function(event){
           if(event.target.textContent == 'CGNWC'){
             //  DO NOTHING
           } else if(event.target.textContent == 'GOVERNANCE'){
@@ -209,39 +209,63 @@
                   $('#closeMenuBtn').slideToggle();
                 }
         });
-      }
-      //  NAVIGATION SCROLLING FEATURE
-      const $root = $('html, body');
-      $(document).on('click touchstart', '#navbar>div>li>ul>li>a, #navbar>div>li>ul>li>ul>li>a, #upScroll' , function(event){
-        event.preventDefault();
-        if($(this).attr('id') == 'upScrollTag'){
-          $timeout(function(){
-            $root.animate({
-                scrollTop: 0
-            }, 500);
-          }, 1000)
-        } else if(event.target.textContent !== 'GOVERNANCE'){
 
-            if($mainContainer.outerWidth() <= 768){
-              let aClassName = $(this).attr('class').split(' ')[1];
-              $timeout(function(){
-                let tagTarget = $('#' + aClassName)
-                $root.animate({
-                    scrollTop: tagTarget[0].offsetTop - headContHeightNum
-                }, 1000);
-              }, 500)
-            } else {
+        //  NAVIGATION SCROLLING FEATURE FOR MOBILE
+        const $root = $('html, body');
+        $(document).on('touchstart', '#navbar>div>li>ul>li>a, #navbar>div>li>ul>li>ul>li>a, #upScroll>a' , function(event){
+          event.preventDefault();
+          if($(this).attr('id') == 'upScrollTag'){
+            $timeout(function(){
+              $root.animate({
+                  scrollTop: 0
+              }, 500);
+            }, 1000)
+          } else if(event.target.textContent !== 'GOVERNANCE'){
+
                 let aClassName = $(this).attr('class').split(' ')[1];
                 $timeout(function(){
                   let tagTarget = $('#' + aClassName)
                   $root.animate({
-                      scrollTop: tagTarget[0].offsetTop
+                      scrollTop: tagTarget[0].offsetTop - headContHeightNum
                   }, 1000);
                 }, 500)
-              }
+            }
+        });
 
-          }
-      });
+      } else {
+          //  NAVIGATION SCROLLING FEATURE
+          const $root = $('html, body');
+          $(document).on('click', '#navbar>div>li>ul>li>a, #navbar>div>li>ul>li>ul>li>a, #upScroll' , function(event){
+            event.preventDefault();
+            if($(this).attr('id') == 'upScrollTag'){
+              $timeout(function(){
+                $root.animate({
+                    scrollTop: 0
+                }, 500);
+              }, 1000)
+            } else if(event.target.textContent !== 'GOVERNANCE'){
+
+                if($mainContainer.outerWidth() <= 768){
+                  let aClassName = $(this).attr('class').split(' ')[1];
+                  $timeout(function(){
+                    let tagTarget = $('#' + aClassName)
+                    $root.animate({
+                        scrollTop: tagTarget[0].offsetTop - headContHeightNum
+                    }, 1000);
+                  }, 500)
+                } else {
+                    let aClassName = $(this).attr('class').split(' ')[1];
+                    $timeout(function(){
+                      let tagTarget = $('#' + aClassName)
+                      $root.animate({
+                          scrollTop: tagTarget[0].offsetTop
+                      }, 1000);
+                    }, 500)
+                  }
+
+              }
+          });
+        }
 
     } //  END MAINCTRL -  CONTROLLER
 
