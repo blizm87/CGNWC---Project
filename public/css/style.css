@@ -800,10 +800,6 @@ body {
 
         @media screen and (max-width: 768px) {
 
-          #mainContent {
-            padding: 20px;
-          }
-
           .slideContainer {
             height: 5em;
           }
@@ -869,10 +865,6 @@ body {
             right: 0;
             bottom: 0;
             margin-right: 0;
-          }
-
-          #footer {
-            margin-top: 1px;
           }
 
         }
