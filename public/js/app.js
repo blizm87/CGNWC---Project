@@ -223,16 +223,16 @@
           // event.preventDefault();
           if($(this).attr('id') == 'upScroll'){
             $timeout(function(){
-              $root.animate({
+              $('body').animate({
                   scrollTop: 0
-              }, 500);
-            }, 1000)
+              }, 1000);
+            }, 500)
           } else if(event.target.textContent !== 'GOVERNANCE'){
 
                 let aClassName = $(this).attr('class').split(' ')[1];
                 $timeout(function(){
                   let tagTarget = $('#' + aClassName)
-                  $root.animate({
+                  $('body').animate({
                       scrollTop: tagTarget[0].offsetTop - headContHeightNum
                   }, 1000);
                 }, 500)
@@ -242,33 +242,23 @@
       } else {
           //  NAVIGATION SCROLLING FEATURE
           const $root = $('html, body');
-          $(document).on('click', '#navbar>div>li>ul>li>a, #navbar>div>li>ul>li>ul>li>a, #upScroll' , function(event){
+          $(document).on('click', '#navbar>div>li>ul>li>a, #navbar>div>li>ul>li>ul>li>a, #upScroll>a' , function(event){
             event.preventDefault();
             if($(this).attr('id') == 'upScrollTag'){
               $timeout(function(){
                 $root.animate({
                     scrollTop: 0
-                }, 500);
-              }, 1000)
+                }, 1000);
+              }, 500)
             } else if(event.target.textContent !== 'GOVERNANCE'){
 
-                if($mainContainer.outerWidth() <= 768){
-                  let aClassName = $(this).attr('class').split(' ')[1];
-                  $timeout(function(){
-                    let tagTarget = $('#' + aClassName)
-                    $root.animate({
-                        scrollTop: tagTarget[0].offsetTop - headContHeightNum
-                    }, 1000);
-                  }, 500)
-                } else {
-                    let aClassName = $(this).attr('class').split(' ')[1];
-                    $timeout(function(){
-                      let tagTarget = $('#' + aClassName)
-                      $root.animate({
-                          scrollTop: tagTarget[0].offsetTop
-                      }, 1000);
-                    }, 500)
-                  }
+                let aClassName = $(this).attr('class').split(' ')[1];
+                $timeout(function(){
+                  let tagTarget = $('#' + aClassName)
+                  $root.animate({
+                      scrollTop: tagTarget[0].offsetTop
+                  }, 1000);
+                }, 500)
 
               }
           });
