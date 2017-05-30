@@ -798,6 +798,18 @@ body {
         }
 
 
+        @media screen and (max-width: 1280px) {
+
+          .eventsContent {
+            display: none;
+          }
+
+          .eventsContentMobile {
+            display: block;
+          }
+
+        }
+
         @media screen and (max-width: 768px) {
 
           .slideContainer {
@@ -826,14 +838,6 @@ body {
             padding-bottom: 0;
             font-size: 18px;
             text-align: center;
-          }
-
-          .eventsContent {
-            display: none;
-          }
-
-          .eventsContentMobile {
-            display: block;
           }
 
           #indSectContainer>section {
