@@ -2,6 +2,10 @@
   "name": "CGNWC---Project",
   "version": "1.0.0",
   "description": "Website for Coconut Grove Negro Women's Club",
+  "engines": {
+    "node": "7.2.0",
+    "npm": "4.0.2"
+  },
   "main": "server.js",
   "dependencies": {
     "body-parser": "^1.17.1",
