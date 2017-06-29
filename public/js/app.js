@@ -109,6 +109,7 @@
           }, function(err){
             console.log(err)
           })
+        $eventCreateForm.slideToggle();
       })
 
       // FIXES TABLE THEAD WIDTH ISSUE
