@@ -119,9 +119,9 @@
 
         // Get the tbody columns width array
         var colWidth = $bodyCells.map(function() {
-            console.log($(this)[0])
-            console.log($(this).outerWidth())
-            console.log($(this)[0].offsetWidth)
+            // console.log($(this)[0])
+            // console.log($(this).outerWidth())
+            // console.log($(this)[0].offsetWidth)
             return $(this).outerWidth();
         }).get();
 
