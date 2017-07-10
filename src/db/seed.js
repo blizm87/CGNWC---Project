@@ -1,7 +1,7 @@
 console.log('I am the seed before it runs');
-const mongoose = require('mongoose');
-require('./configSeed.js');
+require('./config.js');
 console.log('I am the seed after requiring configSeed');
+const mongoose = require('mongoose');
 let IdOne = mongoose.Types.ObjectId();
 let strIdOne = IdOne.toString();
 let IdTwo = mongoose.Types.ObjectId();
