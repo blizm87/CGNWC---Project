@@ -6,6 +6,5 @@ mongoose.connect(url, { useMongoClient: true })
 mongoose.connection.once('open', function () {
   console.log(`Mongoose connected to: ${url}`)
 })
-mongoose.disconnect(url)
 
 module.exports = mongoose

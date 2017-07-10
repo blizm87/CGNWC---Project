@@ -1,5 +1,7 @@
 console.log('I am the seed before it runs');
 const mongoose = require('mongoose');
+require('./configSeed.js');
+console.log('I am the seed after requiring configSeed');
 let IdOne = mongoose.Types.ObjectId();
 let strIdOne = IdOne.toString();
 let IdTwo = mongoose.Types.ObjectId();
@@ -13,7 +15,6 @@ let strIdFive = IdFive.toString();
 let IdSix = mongoose.Types.ObjectId();
 let strIdSix = IdSix.toString();
 
-require('./configSeed.js');
 
 // REQUIRE MODELS
 const member = require('../models/members.js')
